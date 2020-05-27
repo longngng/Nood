@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+NOOD - A comprehensive guidebook about NUS cuisine
+==================================================
+Proposed Level of Achivement: **Apollo 11**
 
-You can use the [editor on GitHub](https://github.com/longngng/Nood/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Motivation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+When you arrive at NUS, you will tentatively be amazed by the complicated structure of the university. Because of this complication, it is a real challenge for you to find the most convenient food or beverage outlet that satisfies your thirst or hunger.
 
-### Markdown
+The first difficulty that you might face when finding a suitable place for your refreshment is the incompatibility of your order and your requirement. Although many food stalls of NUS are gathered in many big canteens with various options, there is still a big chance that you will be unable to have your favourite combos or order food that does not match your taste or your consumption requirement (eg. too spicy, too sour, too greasy, too much, too little …). Improving this fact is important since if food or drinks does not match your expectation, there would be a likely possibility for excessive food waste.  
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The second thing that can prevent you from enjoying most of NUS food offers is the isolated location and unclear direction to some canteens. Most students are only familiar with dining places in their own faculty. This comes from my experience with NUS Engineering’s Halal canteen, a place with very diverse and tasty food options but also is hidden from view. Currently NUS has its own page about dining options, but the page only provides an incomplete  list of food and is also hard to navigate.
 
-```markdown
-Syntax highlighted code block
+### Aim
 
-# Header 1
-## Header 2
-### Header 3
+Our target is to construct a website that provides comprehensive information about NUS eateries and food options as well as an interactive platform for people to share their own experiences and recommendations.  With Nood, everyone now can search and know about the various options of food and beverage offered within NUS campuses and leave useful feedback or suggestions to university’s managers on food quality and service. 
 
-- Bulleted
-- List
+### User story
+1. As a visitor or a freshman or exchange student, this website provides a great overview.
+2. As a student who has tried a lot of NUS food, I want to discover new hidden gems.
+3. As NUS staff, I want to know opinions from students and visitors about the quality of dining places on campus.
+4. As a student and staff who cannot decide know what to eat, let the website recommend for you.
 
-1. Numbered
-2. List
+### System features and development plan
 
-**Bold** and _Italic_ and `Code` text
+#### By 1 July (Milestone 2):
+- A responsive website published on GitHub 
+- Search and filter function
+- Populate database, including opening hours, location, faculties nearby, special requirements, menu, signature dish
+#### By 1 August (Milestone 3):
+- Google sign in
+- Review and rating about a dining place
+- (Pseudo) Machine-learning to suggest food for meal
 
-[Link](url) and ![Image](src)
-```
+### Tech stack
+- Front-end: HTML, CSS, Javascript, Bootstrap
+- Back-end: NodeJS, MongoDB
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/longngng/Nood/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
