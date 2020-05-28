@@ -33,10 +33,9 @@ Our target is to construct a website that provides comprehensive information abo
 
 ### Tech stack
 - Front-end:
-![](https://www.nicepng.com/png/detail/222-2229500_html5-vector-javascript-html-css-javascript-bootstrap.png)
+<img src = "https://www.nicepng.com/png/detail/222-2229500_html5-vector-javascript-html-css-javascript-bootstrap.png" width = "100" height = "100">
 - Back-end:
-![](https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png)
-
+<img src = "https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png" width = "200" height = "100">
 
 
 
