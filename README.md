@@ -32,8 +32,10 @@ Our target is to construct a website that provides comprehensive information abo
 - (Pseudo) Machine-learning to suggest food for meal
 
 ### Tech stack
-- Front-end: HTML, CSS, Javascript, Bootstrap
-- Back-end: NodeJS, MongoDB
+- Font-end:
+![Font-end](https://w7.pngwing.com/pngs/977/12/png-transparent-responsive-web-design-web-development-bootstrap-html-javascript-world-wide-web-text-trademark-logo.png)
+- Back-end:
+![Back-end](https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png)
 
 
 
