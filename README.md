@@ -33,7 +33,7 @@ Our target is to construct a website that provides comprehensive information abo
 
 ### Tech stack
 - Font-end:
-![Font-end](https://w7.pngwing.com/pngs/977/12/png-transparent-responsive-web-design-web-development-bootstrap-html-javascript-world-wide-web-text-trademark-logo.png)
+![Font-end](https://drive.google.com/file/d/1nSxNdB7d6iF2brSv4QMyVmCDxcas-Lhn/view?usp=sharing)
 - Back-end:
 ![Back-end](https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png)
 
