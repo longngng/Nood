@@ -32,10 +32,10 @@ Our target is to construct a website that provides comprehensive information abo
 - (Pseudo) Machine-learning to suggest food for meal
 
 ### Tech stack
-- Font-end:
-![Font-end](https://drive.google.com/file/d/1nSxNdB7d6iF2brSv4QMyVmCDxcas-Lhn/view?usp=sharing)
+- Front-end:
+![](https://www.nicepng.com/png/detail/222-2229500_html5-vector-javascript-html-css-javascript-bootstrap.png)
 - Back-end:
-![Back-end](https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png)
+![](https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png)
 
 
 
