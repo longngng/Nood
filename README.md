@@ -1,6 +1,6 @@
 NOOD - A comprehensive guidebook about NUS cuisine
 ==================================================
-Proposed Level of Achivement: **Apollo 11**
+Proposed Level of Achievement: **Apollo 11**
 
 ### Motivation
 
@@ -25,7 +25,7 @@ Our target is to construct a website that provides comprehensive information abo
 #### By 1 July (Milestone 2):
 - A responsive website published on GitHub 
 - Search and filter function
-- Populate database, including opening hours, location, faculties nearby, special requirements, menu, signature dish
+- Populate database, including opening hours, location, faculties nearby, special requirements, menu, signature dishes
 #### By 1 August (Milestone 3):
 - Google sign in
 - Review and rating about a dining place
