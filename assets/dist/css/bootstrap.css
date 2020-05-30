@@ -1950,6 +1950,12 @@ pre code {
   border-color: #dee2e6;
 }
 
+.site-header {
+  background-color: #EEE;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
 .table-dark {
   color: #fff;
   background-color: #343a40;
