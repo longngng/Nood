@@ -29,6 +29,8 @@ Our target is to construct a website that provides comprehensive information abo
 #### By 1 August (Milestone 3):
 - Google sign in
 - Review and rating about a dining place
+- Deploy the web application on Heroku
+- Popularity system for users 
 - (Pseudo) Machine-learning to suggest food for meal
 
 ### Tech stack
