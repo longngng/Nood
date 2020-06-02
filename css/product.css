@@ -21,11 +21,19 @@
   color: #fff;
   text-decoration: none;
 }
+#nus-background {
+  background-image: url(../images/nus-utown.jpg) ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -bottom: 10rem;
 
+}
 
 .site-footer {
   background-color: #EF7C00;
-  
+}
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */

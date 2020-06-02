@@ -47,27 +47,16 @@
   background-color: rgba(255, 255, 255, .1);
   border-radius: 5px;
 }
-.nus-background {
-  background-image: url(../images/nus-utown.jpg) !important;
-  /* background: pink !important; */
-  padding: 100px;
-  margin: 300px;
-  width: auto;
-  height: 300px;
-}
-#showcase {
-	background:url(../images/nus-utown.jpg) no-repeat center center fixed;
-	/* background-position:center;
-	min-height:300px;
-  margin-bottom:30px;
-  background-repeat: no-repeat;
-  background-size:  500px;
-  text-align:center; */
+#nus-background {
+  background-image: url(../images/nus-utown.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -bottom: 10rem;
+
 }
+
 .product-device-2 {
   top: -25%;
   right: auto;
