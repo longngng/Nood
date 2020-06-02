@@ -38,7 +38,8 @@ Our target is to construct a website that provides comprehensive information abo
 - Back-end:
 <img src = "https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png" width = "900" height = "300" align-text = "center">
 
-
+### Technical proof of concept
+https://longngng.github.io/Nood/index.html
 
 
 
