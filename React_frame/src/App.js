@@ -3,7 +3,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Todos from './component/Todos';
 import Header from './component/layout/header';
 import Addtodo from './component/addTodo';
-import About from './component/pages/Aboutus'
+import About from './component/pages/Aboutus';
+import NUS_background from './component/layout/nus_background';
 import axios from 'axios';
 // import {v4 as uuid} from "uuid";
 import './App.css';
@@ -16,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=0')
       .then(res => this.setState({todos: res.data}))
   }
 
@@ -35,13 +36,7 @@ class App extends Component {
       .then(res => this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]}) );
   }
 
-  //addTodo
   addTodo = (title) => {
-    // const newTodo = {
-    //   id: uuid(),
-    //   title: title,
-    //   completed: false
-    // }
     axios.post('https://jsonplaceholder.typicode.com/todos?_limit=10',
     {
       title,
@@ -61,6 +56,7 @@ class App extends Component {
               <Addtodo addTodo ={this.addTodo}/>
               <Todos todos = {this.state.todos} markComplete = {this.markComplete}
               delTodo = {this.delTodo}/>
+              <NUS_background/>
               </React.Fragment>
             )} />
             <Route exact path = "/aboutus" component = {About}/>

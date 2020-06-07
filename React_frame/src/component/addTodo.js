@@ -17,8 +17,8 @@ export class addTodo extends Component {
                 <input 
                     type = "text" 
                     name = "title" 
-                    style ={{flex: '100px', padding: '5px'}}
-                    placeholder = "Add Todo..."
+                    style ={{flex: '150px', padding: '5px'}}
+                    placeholder = "Search for your crave"
                     value = {this.state.title}
                     onChange = {this.onChange}
                 />
