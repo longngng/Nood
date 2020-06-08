@@ -9,12 +9,22 @@ export default class campuses extends Component {
             //     <Link style = {linkStyle} to = "/UTown" className="CPbtn">UTown</Link> 
             //     <Link style = {linkStyle} to = "/BukitTimah" className = "CPbtn">Bukit Timah</Link> 
             // </div>
-            <div className = "KentRidge">
-                <h6>abc</h6>
+            <div>
+            <Link><section className = "KentRidge">
+                <h6>Kent Ridge Campus</h6>
+                <Link style = {linkStyle} to = "/KentRidge"  className = "CPbtn">Find more</Link>
+            </section></Link>
+
+            {/* <Link><section className = "KentRidge">
+                <h6>University Town</h6>
+                <Link style = {linkStyle} to = "/KentRidge"  className = "CPbtn">Find more</Link>
+            </section></Link>
+            <Link>
+            <section className = "KentRidge">
+                <h6>Bukit Timah Campus</h6>
+                <Link style = {linkStyle} to = "/KentRidge"  className = "CPbtn">Find more</Link>
+            </section></Link> */}
             </div>
-            // <div className = "UTown">
-                
-            // </div>
             // <div className = "BukitTimah">
                 
             // </div>

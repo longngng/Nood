@@ -36,6 +36,7 @@
     transform: rotate(360deg);
   }
 } */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -136,26 +137,32 @@ form {
 .KentRidge {
   background-size: cover;
   background-position: center;
-  width: 100%;
+  width: 33.333%;
   height: 100vh;
-  background-image: url("/images/KentRidge.jpg");
+  background-image: url("/images/KR.jpg");
   text-align: center;
   position: relative;
   z-index: 1;
 }
 .UTown {
   background-image: url("/images/UTown.jpg");
-  width: 100%;
+  width: 33.333%;
   height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .BukitTimah {
   background-image: url("/images/BukitTimah.jpg");
-  width: 100%;
+  width: 33.333%;
   height: 100vh;
   background-size: cover;
   background-position: right;
   position: relative;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }

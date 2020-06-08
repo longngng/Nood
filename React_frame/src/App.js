@@ -4,12 +4,17 @@ import Todos from './component/Todos';
 import Header from './component/layout/header';
 import Addtodo from './component/addTodo';
 import About from './component/pages/Aboutus';
+import {Link} from 'react-router-dom';
 import NUS_background from './component/layout/nus_background';
 import NUS_campuses from './component/layout/campuses';
-
+import NUS_campuses2 from './component/layout/campuses2';
+import NUS_campuses3 from './component/layout/campuses3';
+import {Container, Row, Col} from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 // import {v4 as uuid} from "uuid";
 import './App.css';
+// import { ReactComponent } from '*.svg';
 
 class App extends Component {
   state = {
@@ -51,19 +56,32 @@ class App extends Component {
     return (
       <Router>
         <div className = "App">
-          <div class="container">
-            <Header />
-            <Route exact path = "/" render = {props => (
-              <React.Fragment>               
-              <Addtodo addTodo ={this.addTodo}/>
-              <Todos todos = {this.state.todos} markComplete = {this.markComplete}
-              delTodo = {this.delTodo}/>
-              <NUS_background/>
-              <NUS_campuses/>
-              </React.Fragment>
-            )} />
-            <Route exact path = "/aboutus" component = {About}/>
-          </div>
+          <div className="container">
+              <Header />
+              <Addtodo addTodo={this.addTodo} />
+              <Route
+                exact
+                path="/"
+                render={props => (
+                  <React.Fragment>
+                    {/* <Todos
+                      todos={this.state.todos}
+                      markComplete={this.markComplete}
+                      delTodo={this.delTodo}
+                    /> */}
+                    <NUS_background/>
+                    <Container>
+                    <Col>
+                      <Row>123</Row>
+                      <Row>456</Row>
+                      <Row>789</Row>
+                    </Col>
+                    </Container>
+                  </React.Fragment>
+                )}
+              />
+              <Route path="/about" component={About} />
+            </div>
         </div>  
       </Router>
     );
