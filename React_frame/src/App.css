@@ -94,9 +94,24 @@ h7 {
 .nus_background {
   background-size: cover;
   background-position: center;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100vh;
   background-image: url("/images/nus-utown.jpg");
   text-align: center;
-  position: absolute;
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  z-index: 2;
+  padding-bottom: 0px;
+}
+
+form {
+  position: sticky;
+  top: 60px;
+  z-index: 3;
 }
