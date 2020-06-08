@@ -5,6 +5,8 @@ import Header from './component/layout/header';
 import Addtodo from './component/addTodo';
 import About from './component/pages/Aboutus';
 import NUS_background from './component/layout/nus_background';
+import NUS_campuses from './component/layout/campuses';
+
 import axios from 'axios';
 // import {v4 as uuid} from "uuid";
 import './App.css';
@@ -57,6 +59,7 @@ class App extends Component {
               <Todos todos = {this.state.todos} markComplete = {this.markComplete}
               delTodo = {this.delTodo}/>
               <NUS_background/>
+              <NUS_campuses/>
               </React.Fragment>
             )} />
             <Route exact path = "/aboutus" component = {About}/>

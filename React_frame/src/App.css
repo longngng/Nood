@@ -62,7 +62,7 @@ a{
   background: #003D7C;
   cursor: pointer;
   color: aliceblue;
-  padding: 7px 20px;
+  padding: 7px 0px;
 }
 .btn:hover {
   background: rgb(57, 124, 190);
@@ -74,10 +74,23 @@ a{
   background: #EF7C00;
   cursor: pointer;
   color: aliceblue;
-  padding: 7px 20px;
+  padding: 7px 10px;
 }
 
 .Linkbtn:hover {
+  background: rgb(221, 160, 95);
+}
+
+.CPbtn {
+  display: inline-block;
+  border: none;
+  background: #EF7C00;
+  cursor: pointer;
+  color: aliceblue;
+  padding: 7px 10px;
+}
+
+.CPbtn:hover {
   background: rgb(221, 160, 95);
 }
 
@@ -87,9 +100,11 @@ h1 {
 
 h6 {
   font-size: 50px;
+  padding-top: 100px;
 }
 h7 {
   font-size: 20px;
+  padding-top: 120px;
 }
 .nus_background {
   background-size: cover;
@@ -103,15 +118,44 @@ h7 {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0px;
+  width: 100%;
   overflow: hidden;
   z-index: 2;
   padding-bottom: 0px;
 }
 
 form {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 60px;
   z-index: 3;
+}
+
+.KentRidge {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/KentRidge.jpg");
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.UTown {
+  background-image: url("/images/UTown.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.BukitTimah {
+  background-image: url("/images/BukitTimah.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+  position: relative;
 }
