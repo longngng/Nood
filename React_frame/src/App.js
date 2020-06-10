@@ -1,19 +1,24 @@
 import React, {Component} from 'react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Todos from './component/Todos';
-import Header from './component/layout/header';
+import Header_1 from './component/layout/header';
+import Header_2 from './component/layout/header2';
 import Addtodo from './component/addTodo';
 import About from './component/pages/Aboutus';
-import {Link} from 'react-router-dom';
 import NUS_background from './component/layout/nus_background';
 import NUS_campuses from './component/layout/campuses';
 import NUS_campuses2 from './component/layout/campuses2';
 import NUS_campuses3 from './component/layout/campuses3';
-import {Container, Row, Col} from 'react-bootstrap';
+// import {Container, Row, Col} from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 // import {v4 as uuid} from "uuid";
 import './App.css';
+// import { ReactComponent } from '*.svg';
+import KentRidge from './component/pages/KentRidge';
+import BukitTimah from './component/pages/BukitTimah';
+import UTown from './component/pages/UTown';
 // import { ReactComponent } from '*.svg';
 
 class App extends Component {
@@ -57,30 +62,39 @@ class App extends Component {
       <Router>
         <div className = "App">
           <div className="container">
-              <Header />
               <Addtodo addTodo={this.addTodo} />
               <Route
                 exact
                 path="/"
                 render={props => (
                   <React.Fragment>
-                    {/* <Todos
-                      todos={this.state.todos}
-                      markComplete={this.markComplete}
-                      delTodo={this.delTodo}
-                    /> */}
+                    <Header_1 />
                     <NUS_background/>
-                    <Container>
-                    <Col>
-                      <Row>123</Row>
-                      <Row>456</Row>
-                      <Row>789</Row>
-                    </Col>
-                    </Container>
+                      <NUS_campuses/>
+                      <NUS_campuses3/>
+                      <NUS_campuses2/>
+                    <About/>
                   </React.Fragment>
                 )}
               />
-              <Route path="/about" component={About} />
+              <Route path = "/KentRidge" render = { props => (
+                <React.Fragment>
+                  <Header_2/>
+                  <KentRidge/>
+                </React.Fragment>
+              )} />
+              <Route path = "/BukitTimah" render = { props => (
+                <React.Fragment>
+                  <Header_2/>
+                  <BukitTimah/>
+                </React.Fragment>
+              )} />
+              <Route path = "/UTown" render = { props => (
+                <React.Fragment>
+                  <Header_2/>
+                  <UTown/>
+                </React.Fragment>
+              )} />
             </div>
         </div>  
       </Router>

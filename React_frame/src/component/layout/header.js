@@ -1,14 +1,65 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import '../../App'
+import {Link } from 'react-scroll';
 function header() {
     return (
         <header style = {headerStyle}>
-            <Link style = {linkStylehead} to = "/">𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
-            <Link style = {linkStyle} to = "/outlets" className = "Linkbtn">Food Outlets |</Link>          
-            <Link style = {linkStyle} to = "campuses" className = "Linkbtn">Explore |</Link> 
-            <Link style = {linkStyle} to = "/aboutus" className = "Linkbtn">About us |</Link> 
-            <Link style = {linkStyle}to="/" className = "Linkbtn">Home |</Link>
+            {/* <Linkid style = {linkStylehead} to = "/:nus">𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
+            <Link style = {linkStyle} to = "/outlets" className = "Linkbtn"activeStyle = {{color: "rgb(221, 160, 95)"}} >Food Outlets |</Link>          
+            <Link style = {linkStyle} to = "/:campuses" className = "Linkbtn" activeStyle = {{color: "rgb(221, 160, 95)"}}>Explore |</Link> 
+            <Link style = {linkStyle} to = "/aboutus" className = "Linkbtn" activeStyle = {{color: "rgb(221, 160, 95)"}}>About us |</Link> 
+            <Link style = {linkStyle}to="/" className = "Linkbtn" activeStyle = {{color: "rgb(221, 160, 95)"}}>Home |</Link> */}
+           <Link
+                activeClass="active"
+                to="nus"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {500}
+                style = {linkStylehead}
+            >𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
+            <Link
+                activeClass="active"
+                to="outlets"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {500}
+                className = "Linkbtn"
+                style = {linkStyle}
+            >Food Outlets   |</Link>
+            <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {500}
+                className = "Linkbtn"
+                style = {linkStyle}
+            >About   |</Link>
+            <Link
+                activeClass="active"
+                to="campuses"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {500}
+                className = "Linkbtn"
+                style = {linkStyle}
+            >Explore   |</Link>
+            <Link
+                activeClass="active"
+                to="nus"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {500}
+                className = "Linkbtn"
+                style = {linkStyle}
+            >Home   |</Link>
+
         </header>
     )
 }

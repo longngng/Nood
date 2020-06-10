@@ -2,10 +2,10 @@ import React from 'react'
 
 function Aboutus() {
     return (
-        <React.Fragment>
+        <div className = "About" id = "about">
             <h1>Aboutus</h1>
             <p>This is TodoList app</p>
-        </React.Fragment>
+        </div>
     )
 }
 

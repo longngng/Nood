@@ -10,7 +10,7 @@ export default class campuses extends Component {
             //     <Link style = {linkStyle} to = "/BukitTimah" className = "CPbtn">Bukit Timah</Link> 
             // </div>
             <section className = "UTown">
-                <h6>University Town</h6>
+                <h6>𝚄𝚗𝚒𝚟𝚎𝚛𝚜𝚒𝚝𝚢 𝚃𝚘𝚠𝚗</h6>
                 <Link style = {linkStyle} to = "/UTown"  className = "CPbtn">Find more</Link>
             </section>
             // <div className = "BukitTimah">
