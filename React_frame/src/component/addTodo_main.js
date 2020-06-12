@@ -13,11 +13,11 @@ export class addTodo extends Component {
     }
     render() {
         return (
-            <form onSubmit = {this.onSubmit} style = {{display: 'flex', position: 'fixed'}}> 
+            <form onSubmit = {this.onSubmit} className = "submitForm"> 
                 <input 
                     type = "text" 
                     name = "title" 
-                    style ={{width: '80%', padding: '5px'}}
+                    style ={{width: '40%', padding: '5px'}}
                     placeholder = "Search for your crave"
                     value = {this.state.title}
                     onChange = {this.onChange}
@@ -26,7 +26,7 @@ export class addTodo extends Component {
                 type="submit" 
                 value = "Submit" 
                 className ="btn"
-                style = {{width: '20%'}}
+                style = {{width: '10%'}}
                 />
             </form>
         )
@@ -37,4 +37,3 @@ addTodo.propTypes = {
     addTodo: PropTypes.func.isRequired,
 }
 export default addTodo
-

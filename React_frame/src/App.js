@@ -20,7 +20,7 @@ import KentRidge from './component/pages/KentRidge';
 import BukitTimah from './component/pages/BukitTimah';
 import UTown from './component/pages/UTown';
 // import { ReactComponent } from '*.svg';
-
+import UTown_res from './component/layout/utown_res'
 class App extends Component {
   state = {
     todos: [
@@ -62,7 +62,7 @@ class App extends Component {
       <Router>
         <div className = "App">
           <div className="container">
-              <Addtodo addTodo={this.addTodo} />
+              {/* <Addtodo addTodo={this.addTodo} /> */}
               <Route
                 exact
                 path="/"
@@ -70,9 +70,9 @@ class App extends Component {
                   <React.Fragment>
                     <Header_1 />
                     <NUS_background/>
-                      <NUS_campuses/>
-                      <NUS_campuses3/>
-                      <NUS_campuses2/>
+                    <section>
+                      <NUS_campuses/> <NUS_campuses3/><NUS_campuses2/>
+                    </section>
                     <About/>
                   </React.Fragment>
                 )}
@@ -80,19 +80,23 @@ class App extends Component {
               <Route path = "/KentRidge" render = { props => (
                 <React.Fragment>
                   <Header_2/>
+                  <Addtodo/>
                   <KentRidge/>
                 </React.Fragment>
               )} />
               <Route path = "/BukitTimah" render = { props => (
                 <React.Fragment>
                   <Header_2/>
+                  <Addtodo/>
                   <BukitTimah/>
                 </React.Fragment>
               )} />
               <Route path = "/UTown" render = { props => (
                 <React.Fragment>
                   <Header_2/>
+                  <Addtodo/>
                   <UTown/>
+                  <UTown_res/>
                 </React.Fragment>
               )} />
             </div>

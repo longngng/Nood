@@ -15,7 +15,7 @@ function header() {
                 to="nus"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={0}
                 duration= {500}
                 style = {linkStylehead}
             >𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
@@ -24,8 +24,8 @@ function header() {
                 to="outlets"
                 spy={true}
                 smooth={true}
-                offset={-70}
-                duration= {500}
+                offset={0}
+                duration= {1000}
                 className = "Linkbtn"
                 style = {linkStyle}
             >Food Outlets   |</Link>
@@ -34,8 +34,8 @@ function header() {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
-                duration= {500}
+                offset={0}
+                duration= {1000}
                 className = "Linkbtn"
                 style = {linkStyle}
             >About   |</Link>
@@ -44,8 +44,8 @@ function header() {
                 to="campuses"
                 spy={true}
                 smooth={true}
-                offset={-70}
-                duration= {500}
+                offset={0}
+                duration= {1000}
                 className = "Linkbtn"
                 style = {linkStyle}
             >Explore   |</Link>
@@ -54,8 +54,8 @@ function header() {
                 to="nus"
                 spy={true}
                 smooth={true}
-                offset={-70}
-                duration= {500}
+                offset={0}
+                duration= {1000}
                 className = "Linkbtn"
                 style = {linkStyle}
             >Home   |</Link>
