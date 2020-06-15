@@ -18,7 +18,7 @@ export default class campuses extends Component {
                 <div>
                     <Linkid
                     activeClass="active"
-                    to="about"
+                    to="footer"
                     spy={true}
                     smooth={true}
                     offset={0}

@@ -103,6 +103,12 @@ class App extends Component {
                   <UTown_res/>
                 </React.Fragment>
               )} />
+              <Route path = "/Aboutus" render = { props => (
+                <React.Fragment>
+                  <Header_2/>
+                  <AboutUs/>
+                </React.Fragment>
+              )} />
             </div>
         </div>  
       </Router>

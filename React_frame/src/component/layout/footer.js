@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Footer extends Component {
     render() {
         return (
-            <div className = "myfooter">
+            <div className = "myfooter" id = "footer">
                 
                 <br></br>
                 <br></br>
@@ -18,7 +18,7 @@ class Footer extends Component {
 				    <li><a href = "https://https//www.instagram.com">Instagram</a></li>
 				    <li><a href = "">Github</a></li>
 				    <li><a href = "">About</a></li>
-                    <li><Link to="../pages/Aboutus">About Us</Link></li>
+                    <li><Link to="/Aboutus">About Us</Link></li>
                     <li><Link to = "/KentRidge">Find more</Link></li>
 			    </ul>
 

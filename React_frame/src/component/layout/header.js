@@ -1,5 +1,5 @@
 import React from 'react';
-// import {Link} from 'react-router-dom';
+import {Link as Linkroute} from 'react-router-dom';
 import '../../App'
 import {Link } from 'react-scroll';
 function header() {
@@ -21,7 +21,7 @@ function header() {
             >𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
             <Link
                 activeClass="active"
-                to="contact"
+                to="footer"
                 spy={true}
                 smooth={true}
                 offset={0}
@@ -30,16 +30,7 @@ function header() {
                 style = {linkStyle}
             >Contact   |</Link>
 
-            <Link
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration= {1000}
-                className = "Linkbtn"
-                style = {linkStyle}
-            >About   |</Link>
+            <Linkroute style = {linkStyle} to = "/Aboutus" className = "Linkbtn" >About |</Linkroute> 
             <Link
                 activeClass="active"
                 to="campuses"
