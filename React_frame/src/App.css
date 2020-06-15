@@ -279,3 +279,8 @@ form .submitForm {
   background: #003D7C;
   color: aliceblue;
 }
+h3 {
+  font-size: 80px;
+  padding-top: 150px;
+  color: rgb(167, 21, 58);
+}
