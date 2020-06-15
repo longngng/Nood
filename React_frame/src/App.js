@@ -4,8 +4,9 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Todos from './component/Todos';
 import Header_1 from './component/layout/header';
 import Header_2 from './component/layout/header2';
+import Footer from './component/layout/footer';
 import Addtodo from './component/addTodo';
-import About from './component/pages/Aboutus';
+import AboutUs from './component/pages/Aboutus';
 import NUS_background from './component/layout/nus_background';
 import NUS_campuses from './component/layout/campuses';
 import NUS_campuses2 from './component/layout/campuses2';
@@ -73,7 +74,8 @@ class App extends Component {
                     <section>
                       <NUS_campuses/> <NUS_campuses3/><NUS_campuses2/>
                     </section>
-                    <About/>
+                    <Footer/>
+                    {/* <About/> */}
                   </React.Fragment>
                 )}
               />

@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function Aboutus() {
-    return (
-        <div className = "About" id = "about">
-            <h1>Aboutus</h1>
-            <p>This is TodoList app</p>
-        </div>
-    )
+class AboutUs extends Component {
+    render() {
+        return (
+            <div>
+                <h3>ABOUT US page</h3>
+            </div>
+        )
+    }
 }
 
-export default Aboutus;
-
+export default AboutUs

@@ -21,14 +21,14 @@ function header() {
             >𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
             <Link
                 activeClass="active"
-                to="outlets"
+                to="contacts"
                 spy={true}
                 smooth={true}
                 offset={0}
                 duration= {1000}
                 className = "Linkbtn"
                 style = {linkStyle}
-            >Food Outlets   |</Link>
+            >Contacts   |</Link>
             <Link
                 activeClass="active"
                 to="about"
