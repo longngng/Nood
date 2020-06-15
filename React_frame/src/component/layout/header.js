@@ -29,6 +29,7 @@ function header() {
                 className = "Linkbtn"
                 style = {linkStyle}
             >Contact   |</Link>
+
             <Link
                 activeClass="active"
                 to="about"
