@@ -1,5 +1,3 @@
-Install dependencies by
-    npm install express cors mongoose dotenv
+Install dependencies by `npm install express cors mongoose dotenv`
 
-Start the server by 
-    nodemon server
+Start the server by `nodemon server`
