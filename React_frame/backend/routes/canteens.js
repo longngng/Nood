@@ -11,7 +11,7 @@ router.route('/add').post((req, res) => {
   const canteenname = req.body.canteenname;
   const description = req.body.description;
 
-  const newCanteen = new Canteen({canteenname});
+  const newCanteen = new Canteen({canteenname, description});
 
   newCanteen.save()
     .then(() => res.json('Canteen added!'))
