@@ -53,15 +53,6 @@ a{
   text-decoration: none;
 }
 
-/* .container {
-  padding: 0 1 rem;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-} */
-
 .btn {
   display: inline-block;
   border: none;
@@ -86,6 +77,19 @@ a{
 .Linkbtn:hover {
   background: rgb(221, 160, 95);
 }
+._Linkbtn {
+  display: inline-block;
+  border: none;
+  background: #EF7C00;
+  width: 200px;
+  cursor: pointer;
+  color: aliceblue;
+  padding: 7px 10px;
+}
+
+._Linkbtn:hover {
+  background: rgb(221, 160, 95);
+}
 
 .CPbtn {
   display: inline-block;
@@ -105,23 +109,31 @@ h1 {
 }
 
 h6 {
-  font-size: 80px;
-  padding-top: 60px;
+  /* font-size: 80px; */
+  font-size: 400%;
+  /* padding-top: 60px; */
 }
 h7 {
   font-size: 30px;
 }
 .KentRidge h6{
-  padding-top: 390px;
+  /* padding-top: 390px; */
+  /* padding-top: 95%; */
   color: rgb(228, 218, 218);
+  background: rgba(63, 206, 163, 0.438);
+  background-position: cover;
 }
 .UTown h6{
-  padding-top: 465px;
+  /* padding-top: 465px; */
+  /* padding-top: 95%; */
   color: #ffdbdd;
+  background: rgba(63, 206, 163, 0.438);
 }
 .BukitTimah h6{
-  padding-top: 390px;
+  /* padding-top: 390px; */
+  /* padding-top: 95%; */
   color: violet;
+  background: rgba(63, 206, 163, 0.438);
 }
 .nus_background {
   display: flex;
@@ -141,6 +153,7 @@ h7 {
 
 header {
   position: fixed;
+
   top: 0px;
   width: 100%;
   overflow: hidden;
@@ -172,6 +185,7 @@ form {
   width: 100%;
   top: 60px;
   z-index: 3;
+  /* display: flex; */
 }
 form .submitForm {
   position: relative;
@@ -184,7 +198,7 @@ form .submitForm {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  width: 33.33%;
+  width: 100%;
   height: 100vh;
   background-image: url("/images/KR.jpg");
   text-align: center;
@@ -201,7 +215,7 @@ form .submitForm {
   align-items: center;
   justify-content: center;
   background-image: url("/images/UTown.jpg");
-  width: 33.33%;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -218,7 +232,7 @@ form .submitForm {
   align-items: center;
   justify-content: center;
   background-image: url("/images/BukitTimah.jpg");
-  width: 33.33%;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -252,7 +266,7 @@ form .submitForm {
   align-items: center;
   /* justify-content: center; */
   background-size: cover;
-  background-position: center;
+  background-position: center 60%;
   width: 100%;
   height: 50vh;
   background-image: url("/images/BK.jpg");
@@ -260,6 +274,7 @@ form .submitForm {
   position: relative;
   z-index: 1;
   scroll-snap-align: center;
+
 }
 .halfUT {
   display: flex;
@@ -301,17 +316,20 @@ form .submitForm {
 }
 h3 {
   font-size: 80px;
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
 .halfKR h3 {
   color: rgb(167, 21, 58);
+  background: rgba(61, 148, 61, 0.411);
 }
 .halfUT h3{
-  color: aliceblue;
+  color: black;
+  background: rgba(240, 248, 255, 0.336);
 }
 
 .halfBT h3 {
-  color: purple;
+  color: turquoise;
+  background: rgba(204, 150, 49, 0.486);
 }
 
 .about_background {
@@ -328,4 +346,198 @@ h3 {
   position: relative;
   z-index: 1;
   scroll-snap-align: center;
+}
+.about_background h6{
+  font-size: 400%;
+  color: chocolate;
+  padding-top: 10%;
+}
+.about_background p {
+  font-size: 200%;
+  color: aliceblue;
+  background-color: rgba(210, 105, 30, 0.466);
+}
+.banana_background{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  background-size: cover;
+  background-position: right ;
+  width: 100%;
+  background-image: url("/images/banana_back.jpg");
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  scroll-snap-align: center;
+}
+.banana_background h6 {
+  font-size: 300% ;
+  display: flex;
+  color: transparent;
+}
+section {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  width: 75%;
+  /* height: 200vh; */
+  grid-gap: 4rem;
+}
+.container #res_1 {
+  background: url("/images/Arise_and_Shine_E.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_1:hover {
+  background: url("/images/Arise_and_Shine_E.jpg");
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_2 {
+  background: url("/images/coffeeRoast.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_2:hover {
+  background: url("/images/coffeeRoast.jpg");
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_3 {
+  background: url("/images/Atempo.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_3:hover {
+  background: url("/images/Atempo.jpg");
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_4 {
+  background: url("/images/barbar.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_4:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_5 {
+  background: url("/images/central_square.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_5:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_6 {
+  background: url("/images/playtipus_sci.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_6:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_7 {
+  background: url("/images/crave.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_7:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_8 {
+  background: url("/images/Deck.jpg");
+  background-size: cover;
+cursor: pointer;
+}
+/* .container #res_8:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_9 {
+  background: url("/images/delight_ventus.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_9:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_10 {
+  background: url("/images/frontier.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_10:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_11 {
+  background: url("/images/halal.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_11:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_12 {
+  background: url("/images/pgp_air.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_12:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_13 {
+  background: url("/images/pgp-canteen.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_13:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_14 {
+  background: url("/images/subwayengine.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_14:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+.container #res_15 {
+  background: url("/images/foodclique.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+/* .container #res_15:hover {
+  filter: grayscale(50%);
+  background-size: cover;
+} */
+@media only screen and (max-width: 550px) {
+  section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .container {
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }

@@ -19,7 +19,7 @@ function header() {
                 duration= {500}
                 style = {linkStylehead}
             >𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
-            <Link
+            {/* <Link
                 activeClass="active"
                 to="footer"
                 spy={true}
@@ -28,7 +28,7 @@ function header() {
                 duration= {1000}
                 className = "Linkbtn"
                 style = {linkStyle}
-            >Contact   |</Link>
+            >Contact   |</Link> */}
 
             <Linkroute style = {linkStyle} to = "/Aboutus" className = "Linkbtn" >About |</Linkroute> 
             <Link
@@ -60,17 +60,20 @@ const headerStyle = {
     textAlign: 'center',
     padding: '10px',
     background: '#EF7C00',
+    // display: 'flex'
 }
 
 const linkStyle = {
     color: '#fff',
     textAlign: 'center',
-    float: 'right'   
+    float: 'right' ,
+    display: 'flex'
 }
 const linkStylehead = {
     color: '#fff',
     float: 'left',
-    padding: '10px'
+    padding: '10px',
+    display: 'flex'
 }
 export default header;
 

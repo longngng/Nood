@@ -23,7 +23,7 @@ import KentRidge from './component/pages/KentRidge';
 import BukitTimah from './component/pages/BukitTimah';
 import UTown from './component/pages/UTown';
 // import { ReactComponent } from '*.svg';
-import UTown_res from './component/layout/utown_res'
+import Search from './component/pages/search';
 class App extends Component {
   state = {
     todos: [
@@ -64,7 +64,7 @@ class App extends Component {
     return (
       <Router>
         <div className = "App">
-          <div className="container">
+          <div>
               {/* <Addtodo addTodo={this.addTodo} /> */}
               <Route
                 exact
@@ -74,39 +74,42 @@ class App extends Component {
                     <Header_1 />
                     <NUS_background/>
                     <section>
-                      <NUS_campuses/> <NUS_campuses3/><NUS_campuses2/>
+                      <NUS_campuses/> <NUS_campuses2/><NUS_campuses3/>
                     </section>
                     <Footer/>
-                    {/* <About/> */}
                   </React.Fragment>
                 )}
               />
-              <Route path = "/KentRidge" render = { props => (
+              <Route exact path = "/KentRidge" render = { props => (
                 <React.Fragment>
                   <Header_2/>
                   <Addtodo/>
                   <KentRidge/>
                 </React.Fragment>
               )} />
-              <Route path = "/BukitTimah" render = { props => (
+              <Route exact path = "/BukitTimah" render = { props => (
                 <React.Fragment>
                   <Header_2/>
                   <Addtodo/>
                   <BukitTimah/>
                 </React.Fragment>
               )} />
-              <Route path = "/UTown" render = { props => (
+              <Route exact path = "/UTown" render = { props => (
                 <React.Fragment>
                   <Header_2/>
                   <Addtodo/>
                   <UTown/>
-                  <UTown_res/>
                 </React.Fragment>
               )} />
-              <Route path = "/Aboutus" render = { props => (
+              <Route exact path = "/Aboutus" render = { props => (
                 <React.Fragment>
                   <Header_2/>
                   <AboutUs/>
+                </React.Fragment>
+              )} />
+              <Route exact path = "/Search_result" render = { props => (
+                <React.Fragment>
+                  <Search/>
                 </React.Fragment>
               )} />
             </div>
