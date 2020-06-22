@@ -7,6 +7,8 @@ export default class campuses extends Component {
         return (
             <div>
             <section className = "UTown">
+                <div>
+            <br/>
                 <br/>
                 <br/>
                 <br/>
@@ -27,14 +29,14 @@ export default class campuses extends Component {
                 <br/>
                 <br/>
                 <br/>
-                <br/>
-                <br/>
-                <br/>
-                
                 <h6>𝚄𝚗𝚒𝚟𝚎𝚛𝚜𝚒𝚝𝚢 𝚃𝚘𝚠𝚗</h6>
                 <Link style = {linkStyle} to = "/UTown"  className = "CPbtn">Find more</Link>
-                <br></br>
+                </div>
                 <div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                     <Linkid
                     activeClass="active"
                     to="nus"

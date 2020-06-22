@@ -1,42 +1,33 @@
-/* .App {
-  text-align: center;
+.side-drawer {
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0px; left:0; 
+  width: 50%;
+  max-width: 400px;
+  z-index: 200;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.side-drawer ul {
+  height: 100%;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content:  center;
 }
-
-.App-link {
-  color: #61dafb;
+.side-drawer li {
+  margin: 0.5rem 0;
 }
+.back-drop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 100;
+  top: 0;
+  left: 0;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -64,17 +55,19 @@ a{
 .btn:hover {
   background: rgb(57, 124, 190);
 }
-
+.link {
+  cursor: pointer;
+}
 .Linkbtn {
   display: inline-block;
-  border: none;
+  border-color: aliceblue;
   background: #EF7C00;
   cursor: pointer;
   color: aliceblue;
   padding: 7px 10px;
 }
 
-.Linkbtn:hover {
+.Linkbtn:hover,.Linkbtn:active {
   background: rgb(221, 160, 95);
 }
 ._Linkbtn {
@@ -87,7 +80,7 @@ a{
   padding: 7px 10px;
 }
 
-._Linkbtn:hover {
+._Linkbtn:hover,._Linkbtn:active {
   background: rgb(221, 160, 95);
 }
 
@@ -103,7 +96,27 @@ a{
 .CPbtn:hover {
   background: rgb(221, 160, 95);
 }
-
+.res_button {
+  font-size: 4vh;
+  font-weight: lighter;
+  height: 5vh;
+  width: 5vh;
+  cursor: pointer;
+  display: inline-block;
+  align-items: center;
+  border-color: aliceblue;
+  background-color: transparent;
+  border-width: 0px;
+  color: aliceblue;
+  box-shadow: none;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+}
+.res_button:hover, .res_button:active {
+  background-color: rgb(221, 160, 95) ;
+}
 h1 {
   font-size: xx-large;
 }
@@ -128,12 +141,20 @@ h7 {
   /* padding-top: 95%; */
   color: #ffdbdd;
   background: rgba(63, 206, 163, 0.438);
+  /* position: absolute;
+  top: 469px; */
 }
 .BukitTimah h6{
   /* padding-top: 390px; */
   /* padding-top: 95%; */
   color: violet;
   background: rgba(63, 206, 163, 0.438);
+  position: flex;
+  top: 56.8%;
+}
+.BukitTimah .CPbtn {
+  position: flex;
+  top: 78.5%;
 }
 .nus_background {
   display: flex;
@@ -151,15 +172,22 @@ h7 {
   scroll-snap-align: center;
 }
 
-header {
+nav {
+  box-sizing: border-box;
   position: fixed;
-
   top: 0px;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 2;
-  padding-bottom: 0px;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 6vh;
+  letter-spacing: 5px;
+  font-size: 20px;
 }
+
 .myfooter{
 	background: #333;
 	color: #fff;
@@ -183,7 +211,7 @@ header {
 
 form {
   width: 100%;
-  top: 60px;
+  top: 40px;
   z-index: 3;
   /* display: flex; */
 }
@@ -199,7 +227,7 @@ form .submitForm {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("/images/KR.jpg");
   text-align: center;
   position: relative;
@@ -216,7 +244,7 @@ form .submitForm {
   justify-content: center;
   background-image: url("/images/UTown.jpg");
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -233,7 +261,7 @@ form .submitForm {
   justify-content: center;
   background-image: url("/images/BukitTimah.jpg");
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -253,7 +281,7 @@ form .submitForm {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   background-image: url("/images/KentRidge.jpg");
   text-align: center;
   position: relative;
@@ -268,7 +296,7 @@ form .submitForm {
   background-size: cover;
   background-position: center 60%;
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   background-image: url("/images/BK.jpg");
   text-align: center;
   position: relative;
@@ -284,7 +312,7 @@ form .submitForm {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   background-image: url("/images/ut.jpg");
   text-align: center;
   position: relative;
@@ -386,7 +414,6 @@ section {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   width: 75%;
-  /* height: 200vh; */
   grid-gap: 4rem;
 }
 .container #res_1 {
@@ -527,7 +554,7 @@ cursor: pointer;
   filter: grayscale(50%);
   background-size: cover;
 } */
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 768px) {
   section {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -540,4 +567,29 @@ cursor: pointer;
     grid-template-columns: 1fr ;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
+  .roundbutton {
+    display: none;
+  }
+
+  .nav-links {
+    transform: translateX(200%);
+  }
+  .res_button {
+    display: block;
+    cursor: pointer;
+  }
+  .res_button:hover {
+    background: rgb(221, 160, 95);
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: right;
+  }
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  float: right;
+  letter-spacing: 3px;
+  font-weight: bold;
 }

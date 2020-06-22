@@ -1,0 +1,28 @@
+.res_name {
+    background: pink;
+}
+.top_favorit {
+    background: red;
+}
+.res_image {
+    background: blue;
+}
+.background_container{
+    background-color: rgb(241, 213, 217);
+    width: 75%;
+    align-content: center;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2 fr 1fr 1fr;
+    grid-template-areas: 
+    ".res_name .top_favorit"
+    ".res_image .dish_image"
+    ".rating .dish_image"
+    ".intro .dish_image"
+    ".comment .dish_image";
+    grid-gap: 0.5 rem;
+}
+.background{
+    background-color: rgb(241, 213, 217);
+}

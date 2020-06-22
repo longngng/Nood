@@ -2,35 +2,36 @@ import React from 'react';
 import {Link as Linkroute} from 'react-router-dom';
 import '../../App'
 import {Link } from 'react-scroll';
-function header() {
-    return (
-        <header style = {headerStyle}>
-            {/* <Linkid style = {linkStylehead} to = "/:nus">𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
-            <Link style = {linkStyle} to = "/outlets" className = "Linkbtn"activeStyle = {{color: "rgb(221, 160, 95)"}} >Food Outlets |</Link>          
-            <Link style = {linkStyle} to = "/:campuses" className = "Linkbtn" activeStyle = {{color: "rgb(221, 160, 95)"}}>Explore |</Link> 
-            <Link style = {linkStyle} to = "/aboutus" className = "Linkbtn" activeStyle = {{color: "rgb(221, 160, 95)"}}>About us |</Link> 
-            <Link style = {linkStyle}to="/" className = "Linkbtn" activeStyle = {{color: "rgb(221, 160, 95)"}}>Home |</Link> */}
-           <Link
+import DrawToggleButton from './drawToggleButton'
+// function header() {
+//     return (
+const header = props => (
+        <div>
+        <nav style = {headerStyle}>
+            <div class = "res_button">
+                <DrawToggleButton click = {props.drawerClickHandler}/>
+            </div>
+            <Link
                 activeClass="active"
                 to="nus"
                 spy={true}
                 smooth={true}
                 offset={0}
                 duration= {500}
+                className = "link"
                 style = {linkStylehead}
             >𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
-            {/* <Link
+            <div class = "nav-links">
+            <Link
                 activeClass="active"
-                to="footer"
+                to="nus"
                 spy={true}
                 smooth={true}
                 offset={0}
                 duration= {1000}
                 className = "Linkbtn"
                 style = {linkStyle}
-            >Contact   |</Link> */}
-
-            <Linkroute style = {linkStyle} to = "/Aboutus" className = "Linkbtn" >About |</Linkroute> 
+            >Home</Link>
             <Link
                 activeClass="active"
                 to="campuses"
@@ -40,39 +41,30 @@ function header() {
                 duration= {1000}
                 className = "Linkbtn"
                 style = {linkStyle}
-            >Explore   |</Link>
-            <Link
-                activeClass="active"
-                to="nus"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration= {1000}
-                className = "Linkbtn"
-                style = {linkStyle}
-            >Home   |</Link>
-
-        </header>
+            >Explore</Link>
+            <Linkroute style = {linkStyle} to = "/Aboutus" className = "Linkbtn" >About</Linkroute>
+            </div>
+        </nav>
+        </div>
     )
-}
 const headerStyle = {
     color: '#fff',
     textAlign: 'center',
-    padding: '10px',
+    position: 'fixed',
     background: '#EF7C00',
-    // display: 'flex'
 }
 
 const linkStyle = {
     color: '#fff',
     textAlign: 'center',
-    float: 'right' ,
-    display: 'flex'
+    display: 'flex',
+    float: 'right',
 }
 const linkStylehead = {
     color: '#fff',
-    float: 'left',
-    padding: '10px',
+    position: 'absolute',
+    top: '7px',
+    left: '100px',
     display: 'flex'
 }
 export default header;

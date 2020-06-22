@@ -20,11 +20,7 @@ export default class campuses extends Component {
                 <br/>
                 <br/>
                 <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+            
                 <footer style = {footStyle}>
                     <h6>𝙺𝚎𝚗𝚝 𝚁𝚒𝚍𝚐𝚎 𝙲𝚊𝚖𝚙𝚞𝚜</h6>
                     <Link style = {linkStyle} to = "/KentRidge"  className = "CPbtn">Find more</Link>

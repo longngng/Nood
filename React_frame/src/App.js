@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Todos from './component/Todos';
 import Header_1 from './component/layout/header';
 import Header_2 from './component/layout/header2';
+import SideDrawer from './component/layout/SideDrawer';
+import Backdrop from './component/layout/Backdrop';
 import Footer from './component/layout/footer';
 import Addtodo from './component/addTodo';
 
@@ -24,11 +26,14 @@ import BukitTimah from './component/pages/BukitTimah';
 import UTown from './component/pages/UTown';
 // import { ReactComponent } from '*.svg';
 import Search from './component/pages/search';
+import A_and_S from './component/Res_template/template_res';
 class App extends Component {
   state = {
     todos: [
 
-    ]
+    ],
+    sideDrawerOpen: false,
+
   }
 
   componentDidMount() {
@@ -60,18 +65,34 @@ class App extends Component {
     })
       .then(res => this.setState({ todos: [...this.state.todos, res.data]}))
   }
+  drawerToggleClickHandler = () => {
+    this.setState ((prevState) => {
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+    });
+  }
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+  }
   render() {
+    let sidedrawer;
+    let backdrop;
+    if (this.state.sideDrawerOpen) {
+      sidedrawer = <SideDrawer/>;
+      backdrop = <Backdrop click = {this.backdropClickHandler}/>;
+    }
     return (
       <Router>
         <div className = "App">
-          <div>
+          <div style = {{height: '100%'}}>
               {/* <Addtodo addTodo={this.addTodo} /> */}
               <Route
                 exact
                 path="/"
                 render={props => (
                   <React.Fragment>
-                    <Header_1 />
+                    <Header_1 drawerClickHandler= {this.drawerToggleClickHandler}/>
+                    {sidedrawer}
+                    {backdrop}
                     <NUS_background/>
                     <section>
                       <NUS_campuses/> <NUS_campuses2/><NUS_campuses3/>
@@ -112,8 +133,17 @@ class App extends Component {
                   <Search/>
                 </React.Fragment>
               )} />
+              <Route exact path = "/A_and_S" render = { props => (
+                <React.Fragment>
+                  <Header_2/>
+                  <Addtodo/>
+                  <A_and_S/>
+                  <Footer/>
+                </React.Fragment>
+              )} />
             </div>
         </div>  
+        <script src = "./component/layout/control_nav"></script>
       </Router>
     );
   }
