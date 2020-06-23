@@ -8,35 +8,10 @@ export default class campuses extends Component {
             <div>
             <section className = "UTown">
                 <div>
-            <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
                 <h6>𝚄𝚗𝚒𝚟𝚎𝚛𝚜𝚒𝚝𝚢 𝚃𝚘𝚠𝚗</h6>
                 <Link style = {linkStyle} to = "/UTown"  className = "CPbtn">Find more</Link>
                 </div>
                 <div>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
                     <Linkid
                     activeClass="active"
                     to="nus"
@@ -46,9 +21,7 @@ export default class campuses extends Component {
                     duration= {1000}
                     className = "roundbutton"
                     style = {{float: 'center'}}
-                    >
-                    ^
-                    </Linkid>
+                    >^</Linkid>
                 </div>
             </section>
             </div>

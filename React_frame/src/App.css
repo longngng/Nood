@@ -246,13 +246,12 @@ form .submitForm {
   width: 100%;
   min-height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: left;
   position: relative;
   text-align: center;
-  position: relative;
   float: center;
   z-index: 1;
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
 }
 .BukitTimah {
   display: flex;
@@ -336,6 +335,9 @@ form .submitForm {
   font-weight: bolder;
   background: aliceblue;
   color: #003D7C;
+  position: absolute;
+  top: 80vh;
+  left: 50%;
 }
 
 .roundbutton:hover {

@@ -15,28 +15,6 @@ export default class nus_background extends Component {
                     <h7>World class University and cuisine paradise!</h7>
                 </footer> 
                 <Addtodo_main/>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
                 <div>
                     <Link
                     activeClass="active"
