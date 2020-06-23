@@ -22,6 +22,7 @@ import axios from 'axios';
 import './App.css';
 // import { ReactComponent } from '*.svg';
 import KentRidge from './component/pages/KentRidge';
+import KentRidge2 from './component/pages/KentRidge2';
 import BukitTimah from './component/pages/BukitTimah';
 import UTown from './component/pages/UTown';
 // import { ReactComponent } from '*.svg';
@@ -108,6 +109,7 @@ class App extends Component {
                   <KentRidge/>
                 </React.Fragment>
               )} />
+              <Route path="/KentRidge2" component={KentRidge2} />
               <Route exact path = "/BukitTimah" render = { props => (
                 <React.Fragment>
                   <Header_2/>

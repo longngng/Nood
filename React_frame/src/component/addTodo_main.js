@@ -7,14 +7,31 @@ import axios from 'axios';
 
 
 export class addTodo extends Component {
-    state = {
-        title: ''
+    constructor(props) {
+        super(props);
+
+        this.onChangeSearchKey = this.onChangeSearchKey.bind(this);
+
+        this.state = {
+            searchkey : ''
+        }
     }
 
-    onChange = (e) => this.setState({[e.target.name]: e.target.value})
+    onChangeSearchKey(e) {
+        this.setState({
+            searchkey : e.target.value
+        })
+    }
+
+    //onChange = (e) => this.setState({[e.target.name]: e.target.value})
     onSubmit = (e) => {
         e.preventDefault();
-        axios.get('http://localhost:5000/canteens/')
+        
+        const sendData = {
+            searchkey: this.state.searchkey
+        }
+        console.log(sendData);
+        axios.post('http://localhost:5000/canteens/search', sendData)
         .then(response => {
             if (response.data.length > 0) {
                 console.log(response.data);
@@ -24,8 +41,8 @@ export class addTodo extends Component {
             console.log(error);
         })
 
-        this.props.addTodo(this.state.title);
-        this.setState({title: ''});
+        // this.props.addTodo(this.state.title);
+        // this.setState({title: ''});
     }
     render() {
         return (
@@ -35,8 +52,8 @@ export class addTodo extends Component {
                     name = "title" 
                     style ={{width: '40%', padding: '5px'}}
                     placeholder = "Search for your crave"
-                    value = {this.state.title}
-                    onChange = {this.onChange}
+                    value = {this.state.searchkey}
+                    onChange = {this.onChangeSearchKey}
                 />
                 <input 
                 type="submit" 

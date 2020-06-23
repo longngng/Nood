@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Footer from '../layout/footer'
 import {Link} from 'react-router-dom'
 export default class KentRidge extends Component {
+    array1 = [{iden: "res_1", name: "Arise and Shine"}, {iden: "res_3", name: "A Tempo"}, {iden: "res_5", name: "Central Square"}];
     render() {
         return (
             <div>
@@ -17,10 +18,17 @@ export default class KentRidge extends Component {
                     {/* <h6>𝓒𝓱𝓸𝓸𝓼𝓮 𝓽𝓱𝓮 𝓸𝓷𝓮 𝓽𝓱𝓪𝓽 𝓲𝓷𝓽𝓮𝓻𝓮𝓼𝓽𝓼 𝔂𝓸𝓾</h6> */}
                     <br/>
                     <div className = "container">
+                        <div id = {this.array1[0]['iden']}><br/><br/><br/><br/><br/><br/><br/><br/><Link style = {linkStyle}to="/Coffee_Roast" className = "_Linkbtn">
+                        {this.array1[0]['name']}</Link></div>
+                        <div id = {this.array1[1]['iden']}><br/><br/><br/><br/><br/><br/><br/><br/><Link style = {linkStyle}to="/Coffee_Roast" className = "_Linkbtn">
+                        {this.array1[1]['name']}</Link></div>
+                        <div id = {this.array1[2]['iden']}><br/><br/><br/><br/><br/><br/><br/><br/><Link style = {linkStyle}to="/Coffee_Roast" className = "_Linkbtn">
+                        {this.array1[2]['name']}</Link></div>
+                    
                         <div id = "res_1"><br/><br/><br/><br/><br/><br/><br/><br/><Link style = {linkStyle}to="/A_and_S" className = "_Linkbtn">
                         Arise and Shine</Link></div>
                         <div id = "res_2"><br/><br/><br/><br/><br/><br/><br/><br/><Link style = {linkStyle}to="/Coffee_Roast" className = "_Linkbtn">
-                        Coffee Roast</Link></div>
+                        Coffee Roast</Link></div>                        
                         <div id = "res_3"><br/><br/><br/><br/><br/><br/><br/><br/><Link style = {linkStyle}to="/" className = "_Linkbtn">
                         A Tempo</Link></div>
                         <div id = "res_4"><br/><br/><br/><br/><br/><br/><br/><br/><Link style = {linkStyle}to="/" className = "_Linkbtn">
