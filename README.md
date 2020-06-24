@@ -23,13 +23,12 @@ Our target is to construct a website that provides comprehensive information abo
 ### System features and development plan
 
 #### By 1 July (Milestone 2):
-- A responsive website published on GitHub 
+- A responsive website application on Heroku
 - Search and filter function
 - Populate database, including opening hours, location, faculties nearby, special requirements, menu, signature dishes
 #### By 1 August (Milestone 3):
-- Google sign in
+- User login system with Google sign-in function
 - Review and rating about a dining place
-- Deploy the web application on Heroku
 - Popularity system for users 
 - (Pseudo) Machine-learning to suggest food for meal
 
@@ -40,8 +39,10 @@ Our target is to construct a website that provides comprehensive information abo
 - Back-end:
 <img src = "https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png" width = "900" height = "300" align-text = "center">
 
-### Technical proof of concept
-https://longngng.github.io/Nood/index.html
+### How to run it
+Firstly, go to the root of the repo and run `npm install` to install dependencies, then `npm start`
+To run the server, go to the `./backend` folder, then install dependencies by `npm install express cors mongoose dotenv`. 
+Start the server by `nodemon server`
 
 
 
