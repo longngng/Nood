@@ -2,6 +2,8 @@ NOOD - A comprehensive guidebook about NUS cuisine
 ==================================================
 Proposed Level of Achievement: **Apollo 11**
 
+# Visit the website at https://nusfood.herokuapp.com/
+
 ### Motivation
 
 When you arrive at NUS, you will tentatively be amazed by the complicated structure of the university. Because of this complication, it is a real challenge for you to find the most convenient food or beverage outlet that satisfies your thirst or hunger.
@@ -39,10 +41,9 @@ Our target is to construct a website that provides comprehensive information abo
 - Back-end:
 <img src = "https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png" width = "900" height = "300" align-text = "center">
 
-### How to run it
-Firstly, go to the root of the repo and run `npm install` to install dependencies, then `npm start`
-To run the server, go to the `./backend` folder, then install dependencies by `npm install express cors mongoose dotenv`. 
-Start the server by `nodemon server`
+### How to run it locally
+1. Go to folder `./client` and run `npm install` to install dependencies, then `npm start`
+2. To run the server, at home directory, install dependencies by `npm install express cors mongoose dotenv`. Start the server by `nodemon server`.
 
 
 
