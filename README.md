@@ -23,13 +23,12 @@ Our target is to construct a website that provides comprehensive information abo
 ### System features and development plan
 
 #### By 1 July (Milestone 2):
-- A responsive website published on GitHub 
+- A responsive website application on Heroku
 - Search and filter function
 - Populate database, including opening hours, location, faculties nearby, special requirements, menu, signature dishes
 #### By 1 August (Milestone 3):
-- Google sign in
+- User login system with Google sign-in function
 - Review and rating about a dining place
-- Deploy the web application on Heroku
 - Popularity system for users 
 - (Pseudo) Machine-learning to suggest food for meal
 
