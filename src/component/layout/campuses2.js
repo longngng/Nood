@@ -9,7 +9,7 @@ export default class campuses extends Component {
             <section className = "UTown">
                 <div>
                 <h6>𝚄𝚗𝚒𝚟𝚎𝚛𝚜𝚒𝚝𝚢 𝚃𝚘𝚠𝚗</h6>
-                <Link style = {linkStyle} to = "/UTown"  className = "CPbtn">Find more</Link>
+                <Link onClick = {scrollToTop} style = {linkStyle} to = "/UTown"  className = "CPbtn">Find more</Link>
                 </div>
                 <div>
                     <Linkid
@@ -32,4 +32,7 @@ const linkStyle = {
     color: '#fff',
     textAlign: 'center',
     float: 'center'   
+}
+const scrollToTop = () => {
+    window.scrollTo(0, 0)
 }
