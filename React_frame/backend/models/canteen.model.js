@@ -25,7 +25,7 @@ const canteenSchema = new Schema({
   timestamps: true,
 });
 
-
+canteenSchema.index({name: 'text', desc : 'text'});
 
 const Canteen = mongoose.model('Canteen', canteenSchema);
 //const Comment = mongoose.model('Comment', commentSchema);

@@ -26,8 +26,9 @@ router.route('/add').post((req, res) => {
 
 router.route('/search').post((req, res) => {
   const searchkey = req.body.searchkey;
-  
-  Canteen.find()
+  //{"rating" : 3}
+  //Canteen.find({"rating" : searchkey})
+  Canteen.find({$text: {$search: searchkey}})
     .then(canteens => {
       res.json(canteens);
     })

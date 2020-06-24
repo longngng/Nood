@@ -16,6 +16,7 @@ export default class KentRidge2 extends Component {
         this.state = {
             searchkey: '',
             canteenDisplay: []
+            //listItems,
         }
     }
     componentDidMount() {
@@ -51,7 +52,7 @@ export default class KentRidge2 extends Component {
             if (response.data.length > 0) {
                 console.log(response.data);
                 this.setState({
-                    canteenDisplay : response.data.map(canteen => canteen.rating)
+                    canteenDisplay : response.data.map(canteen => canteen.name)
                 })
             }
         })
@@ -62,6 +63,8 @@ export default class KentRidge2 extends Component {
         // this.props.addTodo(this.state.title);
         // this.setState({title: ''});
     }
+    
+    //this.state.listItems = this.state.canteenDisplay.map((canteen) =><li>{canteen}</li>);
 
     render() {
         return(
@@ -71,7 +74,10 @@ export default class KentRidge2 extends Component {
                 <br></br>
                 <br></br>
                 <h2>Kent Ridge 2</h2>
-                {this.state.canteenDisplay}
+                <ul>
+                    {this.state.canteenDisplay.map(element => <li>{element}</li>)}
+                </ul>
+                {/* {this.state.canteenDisplay} */}
                 <form onSubmit = {this.onSubmit} className = "submitForm"> 
                     <input 
                         type = "text" 
