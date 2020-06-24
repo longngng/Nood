@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Res.css'
 import Star from '../StarRating/StarRating'
+import Dish_1 from './List_of_dishes/Dishes'
 export default class template_res extends Component {
     render() {
         return (
@@ -18,6 +19,7 @@ export default class template_res extends Component {
                     <div className = "res_image">
                     </div>
                     <div className = "dish_image">
+                        <Dish_1/>
                     </div>
                     <div className = "intro">
                     </div>
