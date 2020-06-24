@@ -9,11 +9,17 @@
 .res_image {
     background-image: url("/images/Arise_and_shine_S.jpg");
     background-position: center;
+    background-size: cover;
     grid-area: res_image;
 }
 .dish_image {
+
     background: grey;
     grid-area: dish_image;
+    max-height: 200vh;
+    align-content: center;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 .intro {
     background: violet;
@@ -43,8 +49,30 @@
     "intro dish_image"
     "rating dish_image"
     "comment dish_image";
-    grid-gap: 0.5 rem;
+    grid-gap: 0 rem;
 }
 .background{
     background-color: rgb(241, 213, 217);
+}
+
+@media only screen and (max-width: 768px) {
+    .background_container {
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr 0.1fr 1fr 0.1 1fr;
+        grid-template-areas: 
+        "res_name"
+        "res_image"
+        "intro"
+        "rating"
+        "comment"
+        "top_favorit"
+        "dish_image";
+    }
+    .dish_image {
+        max-height: 50vh; 
+    }
+    h6 {
+        font-size: 200%;
+    }
 }
