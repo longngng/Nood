@@ -2,6 +2,10 @@ const router = require('express').Router();
 // const { body, validationResult } = require('express-validation/check')
 let User = require('../../models/user.model');
 
+//@route: GET api/users
+//@desc: Test route
+//@acess: public
+
 router.route('/').get((req, res) => {
   User.find()
     .then(users => res.json(users))

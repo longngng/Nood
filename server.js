@@ -2,9 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
-// const connectDbB = require('./config/db');
+const connectDbB = require('./config/db');
 
 require('dotenv').config();
+//Connect database
+connectDbB();
 
 const app = express();
 const port = process.env.PORT || 5000;
