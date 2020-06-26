@@ -37,35 +37,6 @@ class App extends Component {
 
   }
 
-  componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=0')
-      .then(res => this.setState({todos: res.data}))
-  }
-
-  //Toggle complete element above
-  markComplete = (id) => {
-    this.setState({ todos: this.state.todos.map(todo => {
-      if (todo.id === id) {
-        todo.completed = !todo.completed;
-      }
-      return todo;
-    }) });
-  }
-  //Delete Todo
-  delTodo = (id) => {
-    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
-      .then(res => this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]}) );
-  }
-
-  addTodo = (title) => {
-    axios.post('https://jsonplaceholder.typicode.com/todos?_limit=10',
-    {
-      title,
-      completed: false
-
-    })
-      .then(res => this.setState({ todos: [...this.state.todos, res.data]}))
-  }
   drawerToggleClickHandler = () => {
     this.setState ((prevState) => {
       return {sideDrawerOpen: !prevState.sideDrawerOpen};
@@ -74,6 +45,7 @@ class App extends Component {
   backdropClickHandler = () => {
     this.setState({sideDrawerOpen: false});
   }
+  
   render() {
     let sidedrawer;
     let backdrop;
