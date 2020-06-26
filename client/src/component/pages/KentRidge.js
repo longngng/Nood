@@ -7,11 +7,6 @@ export default class KentRidge extends Component {
         return (
             <div>
                 <div className = "halfKR" id = "KR">
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
                     <h3>𝙺𝚎𝚗𝚝 𝚁𝚒𝚍𝚐𝚎 𝙲𝚊𝚖𝚙𝚞𝚜</h3>
                 </div>
                 <div className = "banana_background">

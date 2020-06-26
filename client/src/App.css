@@ -130,7 +130,7 @@ h6 {
   /* padding-top: 60px; */
 }
 h7 {
-  font-size: 30px;
+  font-size: 200%;
 }
 .KentRidge h6{
   /* padding-top: 390px; */
@@ -428,139 +428,91 @@ section {
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_1:hover {
-  background: url("/images/Arise_and_Shine_E.jpg");
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_2 {
   background: url("/images/coffeeRoast.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_2:hover {
-  background: url("/images/coffeeRoast.jpg");
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_3 {
   background: url("/images/Atempo.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_3:hover {
-  background: url("/images/Atempo.jpg");
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_4 {
   background: url("/images/barbar.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_4:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_5 {
   background: url("/images/central_square.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_5:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_6 {
   background: url("/images/playtipus_sci.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_6:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_7 {
   background: url("/images/crave.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_7:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_8 {
   background: url("/images/Deck.jpg");
   background-size: cover;
 cursor: pointer;
 }
-/* .container #res_8:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_9 {
   background: url("/images/delight_ventus.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_9:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_10 {
   background: url("/images/frontier.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_10:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_11 {
   background: url("/images/halal.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_11:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_12 {
   background: url("/images/pgp_air.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_12:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_13 {
   background: url("/images/pgp-canteen.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_13:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_14 {
   background: url("/images/subwayengine.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_14:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 .container #res_15 {
   background: url("/images/foodclique.jpg");
   background-size: cover;
   cursor: pointer;
 }
-/* .container #res_15:hover {
-  filter: grayscale(50%);
-  background-size: cover;
-} */
+
 @media only screen and (max-width: 768px) {
   section {
     grid-template-columns: 1fr;
@@ -599,4 +551,16 @@ cursor: pointer;
   float: right;
   letter-spacing: 3px;
   font-weight: bold;
+}
+.nus_background h6{
+  padding-top: 10vh;
+}
+.halfKR h3 {
+  margin-top: 10vh;
+}
+.halfBT h3 {
+  margin-top: 10vh;
+}
+.halfUT h3 {
+  margin-top: 10vh;
 }

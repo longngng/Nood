@@ -6,10 +6,6 @@ export default class nus_background extends Component {
     render() {
         return (
             <div className = "nus_background" id = "nus">
-                <br/>
-                <br/>
-                <br/>
-                <br/>
                 <footer style = {footStyle}>
                     <h6>𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 ℕ𝕌𝕊</h6>
                     <h7>World class University and cuisine paradise!</h7>
