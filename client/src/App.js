@@ -21,6 +21,7 @@ import axios from 'axios';
 // import {v4 as uuid} from "uuid";
 import './App.css';
 // import { ReactComponent } from '*.svg';
+import Homepage from './component/pages/Homepage';
 import KentRidge from './component/pages/KentRidge';
 import KentRidge2 from './component/pages/KentRidge2';
 import BukitTimah from './component/pages/BukitTimah';
@@ -29,59 +30,16 @@ import UTown from './component/pages/UTown';
 import Search from './component/pages/search';
 import A_and_S from './component/Res_template/template_res';
 class App extends Component {
-  state = {
-    todos: [
-
-    ],
-    sideDrawerOpen: false,
-
-  }
-
-  drawerToggleClickHandler = () => {
-    this.setState ((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  }
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
-  }
   
   render() {
-    let sidedrawer;
-    let backdrop;
-    if (this.state.sideDrawerOpen) {
-      sidedrawer = <SideDrawer/>;
-      backdrop = <Backdrop click = {this.backdropClickHandler}/>;
-    }
+    
     return (
       <Router>
-        <div className = "App">
-          <div style = {{height: '100%'}}>
-              {/* <Addtodo addTodo={this.addTodo} /> */}
-              <Route
-                exact
-                path="/"
-                render={props => (
-                  <React.Fragment>
-                    <Header_1 drawerClickHandler= {this.drawerToggleClickHandler}/>
-                    {sidedrawer}
-                    {backdrop}
-                    <NUS_background/>
-                    <section>
-                      <NUS_campuses/> <NUS_campuses2/><NUS_campuses3/>
-                    </section>
-                    <Footer/>
-                  </React.Fragment>
-                )}
-              />
-              <Route exact path = "/KentRidge" render = { props => (
-                <React.Fragment>
-                  <Header_2/>
-                  <Addtodo/>
-                  <KentRidge/>
-                </React.Fragment>
-              )} />
+        <div className = "App" style = {{height: '100%'}}>
+
+              <Route path="/" exact component={Homepage} />
               <Route path="/KentRidge2" component={KentRidge2} />
+              
               <Route exact path = "/BukitTimah" render = { props => (
                 <React.Fragment>
                   <Header_2/>
@@ -115,7 +73,6 @@ class App extends Component {
                   <Footer/>
                 </React.Fragment>
               )} />
-            </div>
         </div>  
         <script src = "./component/layout/control_nav"></script>
       </Router>
@@ -123,3 +80,49 @@ class App extends Component {
   }
 }
 export default App;
+  //state = {
+  //   todos: [
+
+  //   ],
+  //   sideDrawerOpen: false,
+
+  // }
+
+  // drawerToggleClickHandler = () => {
+  //   this.setState ((prevState) => {
+  //     return {sideDrawerOpen: !prevState.sideDrawerOpen};
+  //   });
+  // }
+  // backdropClickHandler = () => {
+  //   this.setState({sideDrawerOpen: false});
+  // }
+  
+  // let sidedrawer;
+  // let backdrop;
+  // if (this.state.sideDrawerOpen) {
+  //   sidedrawer = <SideDrawer/>;
+  //   backdrop = <Backdrop click = {this.backdropClickHandler}/>;
+  // }
+{/* <Route
+                exact
+                path="/Homepage2"
+                render={props => (
+                  <React.Fragment>
+                    <Header_1 drawerClickHandler= {this.drawerToggleClickHandler}/>
+                    {sidedrawer}
+                    {backdrop}
+                    <NUS_background/>
+                    <section>
+                      <NUS_campuses/> <NUS_campuses2/><NUS_campuses3/>
+                    </section>
+                    <Footer/>
+                  </React.Fragment>
+                )}
+              />
+              <Route exact path = "/KentRidge" render = { props => (
+                <React.Fragment>
+                  <Header_2/>
+                  <Addtodo/>
+                  <KentRidge/>
+                </React.Fragment>
+              )} /> */}

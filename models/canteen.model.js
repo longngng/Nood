@@ -14,7 +14,8 @@ const canteenSchema = new Schema({
   desc: {type: String},
   rating: {type: Number, default: 5},
   review: [commentSchema],
-  img_link: {type: String}
+  img_link: {type: String},
+  to_id : {type: String, default: ''}
   //canteenname: { type: String, required: true },
   //description: { type: String},
   
