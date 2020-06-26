@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header_2 from '../layout/header2';
+import Footer from '../layout/footer';
 export default class KentRidge2 extends Component {
     constructor(props) {
         super(props);
@@ -24,7 +25,8 @@ export default class KentRidge2 extends Component {
           .then(response => {
             if (response.data.length > 0) {
               this.setState({
-                canteenDisplay: response.data.map(canteen => canteen.name),
+                // canteenDisplay: response.data.map(canteen => canteen.name),
+                canteenDisplay: response.data,
               })
             }
         })
@@ -52,7 +54,8 @@ export default class KentRidge2 extends Component {
             if (response.data.length > 0) {
                 console.log(response.data);
                 this.setState({
-                    canteenDisplay : response.data.map(canteen => canteen.name)
+                    //canteenDisplay : response.data.map(canteen => canteen.name)
+                    canteenDisplay: response.data
                 })
             }
         })
@@ -70,19 +73,11 @@ export default class KentRidge2 extends Component {
         return(
             <div>
                 <Header_2/>
-                <br></br>
-                <br></br>
-                <br></br>
-                <h2>Kent Ridge 2</h2>
-                <ul>
-                    {this.state.canteenDisplay.map(element => <li>{element}</li>)}
-                </ul>
-                {/* {this.state.canteenDisplay} */}
-                <form onSubmit = {this.onSubmit} className = "submitForm"> 
+                <form onSubmit = {this.onSubmit} style = {{display: 'flex', position: 'fixed'}}> 
                     <input 
                         type = "text" 
                         name = "title" 
-                        style ={{width: '40%', padding: '5px'}}
+                        style ={{width: '80%', padding: '5px'}}
                         placeholder = "Search for your crave"
                         value = {this.state.searchkey}
                         onChange = {this.onChangeSearchKey}
@@ -91,10 +86,46 @@ export default class KentRidge2 extends Component {
                     type="submit" 
                     value = "Submit" 
                     className ="btn"
-                    style = {{width: '10%'}}
+                    style = {{width: '20%'}}
                     />
-                </form>
+                </form>  
+                
+                <div className = "halfKR" id = "KR">
+                    <h3>𝙺𝚎𝚗𝚝 𝚁𝚒𝚍𝚐𝚎 𝙲𝚊𝚖𝚙𝚞𝚜</h3>
+                </div>
+
+
+                <div className =  "banana_background">
+                    {/* <img src="/images/Atempo.jpg" alt="Girl in a jacket" width="500" height="600"/> */}
+                    <div className = "container">
+                            {this.state.canteenDisplay.map((element) => 
+                                {
+                                    return (
+                                <div>
+                                    <img src={element.img_link} alt={element.name} width="273" height="216"/>
+                                    <Link onClick = {scrollToTop} style = {linkStyle} to={element.to_id} className = "_Linkbtn"> {element.name}</Link>
+                                </div>
+                                        )
+                                }
+                            )}                                  
+                    </div>
+                                
+                    {/* <ul>                       
+                        {this.state.canteenDisplay.map(element => <li>{element.name}</li>)}
+                    </ul> */}
+                </div>
+            
+                <Footer/>
             </div>
         )
     }
+}
+
+const linkStyle = {
+    color: '#fff',
+    textAlign: 'center',
+    float: 'center, center'   
+}
+const scrollToTop = () => {
+    window.scrollTo(0, 0)
 }
