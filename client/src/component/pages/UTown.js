@@ -6,11 +6,6 @@ export default class KentRidge extends Component {
         return (
             <div>
             <div className = "halfUT" id = "utown">
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
                 <h3>𝚄𝚗𝚒𝚟𝚎𝚛𝚜𝚒𝚝𝚢 𝚃𝚘𝚠𝚗</h3>
             </div>
             <div className = "banana_background">

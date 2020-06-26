@@ -4,9 +4,10 @@ import '../../App'
 function header_2() {
     return (
         <nav style = {headerStyle}>
-            <Link style = {linkStylehead} to = "/">𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
+            <Link onClick = {scrollToTop} style = {linkStylehead} to = "/">𝓝𝓤𝓢 𝓕𝓸𝓸𝓭</Link>
             <div className = "nav-links">
-            <Link style = {linkStyle}to="/" className = "Linkbtn" activeStyle = {{color: "rgb(221, 160, 95)"}}>Home</Link>
+            <Link onClick = {scrollToTop} style = {linkStyle}to="/" className = "Linkbtn" activeStyle = {{color: "rgb(221, 160, 95)"}}>Home</Link>
+            <Link onClick = {scrollToTop} style = {linkStyle}to="/Register" className = "Linkbtn" activeStyle = {{color: "rgb(221, 160, 95)"}}>Register</Link>
             {/* <Link style = {linkStyle} to = "/" className = "Homebtn"></Link> */}
             </div>
         </nav>
@@ -49,5 +50,8 @@ const linkStylehead = {
     top: '7px',
     left: '100px',
     display: 'flex'
+}
+const scrollToTop = () => {
+    window.scrollTo(0, 0)
 }
 export default header_2;

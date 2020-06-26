@@ -43,6 +43,7 @@ const header = props => (
                 style = {linkStyle}
             >Explore</Link>
             <Linkroute style = {linkStyle} to = "/Aboutus" className = "Linkbtn" >About</Linkroute>
+            <Linkroute style = {linkStyle} to = "/Register" className = "Linkbtn" >Register</Linkroute>
             </div>
         </nav>
         </div>
@@ -66,6 +67,9 @@ const linkStylehead = {
     top: '7px',
     left: '100px',
     display: 'flex'
+}
+const scrollToTop = () => {
+    window.scrollTo(0, 0)
 }
 export default header;
 

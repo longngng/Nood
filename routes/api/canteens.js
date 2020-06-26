@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Canteen = require('../models/canteen.model');
+let Canteen = require('../../models/canteen.model');
 
 router.route('/').get((req, res) => {
   Canteen.find()

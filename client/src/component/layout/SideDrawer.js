@@ -28,6 +28,7 @@ export default class SideDrawer extends Component {
                     style = {linkStyle}
                 >Explore</Link></li>
                 <li><Linkroute style = {linkStyle} to = "/Aboutus" className = "Linkbtn" >About</Linkroute></li>
+                <li><Linkroute style = {linkStyle} to = "/Register" className = "Linkbtn" >Register</Linkroute></li>
                 </ul>
             </div>
         )
