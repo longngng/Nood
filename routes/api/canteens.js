@@ -16,9 +16,9 @@ router.route('/add').post((req, res) => {
   const rating = req.body.rating;
   const img_link = req.body.img_link;
   const review = req.body.review;
-  
+  const campus = req.body.campus
   //const newCanteen = new Canteen({canteenname, description});
-  const newCanteen = new Canteen({name, sig_dish, desc, rating, review, img_link});
+  const newCanteen = new Canteen({name, sig_dish, desc, rating, review, img_link,campus});
   newCanteen.save()
     .then(() => res.json('Canteen added!'))
     .catch(err => res.status(400).json('Error: ' + err));

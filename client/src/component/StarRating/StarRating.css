@@ -5,3 +5,19 @@ input[type = "radio"] {
     cursor: pointer;
     transition: color 200ms;
 }
+.BTN {
+    display: inline-block;
+    border: none;
+    background: #003D7C;
+    cursor: pointer;
+    color: aliceblue;
+    padding: 7px 0px;
+    border-radius: 3vh;
+  }
+  .BTN:hover {
+    background: rgb(57, 124, 190);
+  }
+p {
+    font-size: 150%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

@@ -100,11 +100,14 @@ export default class KentRidge2 extends Component {
                     <div className = "container">
                             {this.state.canteenDisplay.map((element) => 
                                 {
+                                    if (element.campus === "Kent Ridge") 
                                     return (
+    
                                 <div>
                                     <img src={element.img_link} alt={element.name} width="273" height="216"/>
                                     <Link onClick = {scrollToTop} style = {linkStyle} to={element.to_id} className = "_Linkbtn"> {element.name}</Link>
                                 </div>
+                                
                                         )
                                 }
                             )}                                  

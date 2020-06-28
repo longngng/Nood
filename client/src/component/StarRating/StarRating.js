@@ -1,10 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, Component} from "react";
 import {FaStar} from "react-icons/fa";
 import "./StarRating.css";
+import axios from 'axios';
+
 //rating: need to submit this rating to the database to calculate the overal rating
-const StarRating = () => {
-    const [rating, setRating] = useState (null);
-    const [hover, setHover] = useState (null);
+//const StarRating = () => {
+export default class StarRating extends Component {
+    // const [rating, setRating] = useState (null);
+    // const [hover, setHover] = useState (null);
+    render () {
+        const [rating, setRating] = useState (null);
+        const [hover, setHover] = useState (null);
     return (
         <div>
             {[...Array(5)].map((star, i) => {
@@ -21,9 +27,16 @@ const StarRating = () => {
                     </label>
                 );
             })}
-            <p>Your rating is {rating}.</p>
+            <p>Your rating is {rating < 1 ? "..." : rating}</p>
+            <input 
+                    type="submit" 
+                    value = "Submit" 
+                    className ="BTN"
+                    style = {{width: '30%'}}
+            />
         </div>
     );
+    }
 };
 
-export default StarRating;
+//export default StarRating;
