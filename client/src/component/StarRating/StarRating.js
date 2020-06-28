@@ -4,13 +4,13 @@ import "./StarRating.css";
 import axios from 'axios';
 
 //rating: need to submit this rating to the database to calculate the overal rating
-//const StarRating = () => {
-export default class StarRating extends Component {
-    // const [rating, setRating] = useState (null);
-    // const [hover, setHover] = useState (null);
-    render () {
-        const [rating, setRating] = useState (null);
-        const [hover, setHover] = useState (null);
+const StarRating = () => {
+//export default class StarRating extends Component {
+    const [rating, setRating] = useState (null);
+    const [hover, setHover] = useState (null);
+    // render () {
+    //     const [rating, setRating] = useState (null);
+    //     const [hover, setHover] = useState (null);
     return (
         <div>
             {[...Array(5)].map((star, i) => {
@@ -36,7 +36,7 @@ export default class StarRating extends Component {
             />
         </div>
     );
-    }
+    
 };
 
-//export default StarRating;
+export default StarRating;
