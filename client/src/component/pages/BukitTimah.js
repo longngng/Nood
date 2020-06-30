@@ -21,7 +21,7 @@ export default class BukitTimah extends Component {
         }
     }
     componentDidMount() {
-        axios.get('http://localhost:5000/canteens')
+        axios.get('canteens')
           .then(response => {
             if (response.data.length > 0) {
               this.setState({
@@ -49,7 +49,7 @@ export default class BukitTimah extends Component {
             searchkey: this.state.searchkey
         }
         console.log(sendData);
-        axios.post('http://localhost:5000/canteens/search', sendData)
+        axios.post('canteens/search', sendData)
         .then(response => {
             if (response.data.length > 0) {
                 console.log(response.data);
