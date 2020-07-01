@@ -3,6 +3,7 @@ const config = require('config');
 const db = config.get('mongoURI');
 const parser = {
     useNewUrlParser: true,
+    useUnifiedTopology: true 
 }
 const connectDB = async () => {
     try {
