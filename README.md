@@ -2,7 +2,7 @@ NOOD - A comprehensive guidebook about NUS cuisine
 ==================================================
 Proposed Level of Achievement: **Apollo 11**
 
-# Visit the website at https://nusfood.herokuapp.com/
+# Visit the website at https://foodnus.herokuapp.com/
 
 ### Motivation
 
