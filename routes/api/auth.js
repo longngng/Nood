@@ -1,12 +1,12 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 
-//@route Get api/auth
-//@desc Test route
-//@acess Public
+//@route: GET api/auth
+//@desc: Test route
+//@access: public
 
-router.get('/',(req,res) => {
-    res.send('Auth route');
-})
+router.route('/').get((req, res) => {
+  res.send("Auth router");
+
+});
 
 module.exports = router;
