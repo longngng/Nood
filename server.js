@@ -14,19 +14,19 @@ app.get('/',(req,res) => res.send('API running'));
 app.use(cors());
 app.use(express.json({extended: false}));
 
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
-);
-const connection = mongoose.connection;
-connection.once('open', () => {
-  console.log("MongoDB database connection established successfully");
-})
+// const uri = process.env.ATLAS_URI;
+// mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
+// );
+// const connection = mongoose.connection;
+// connection.once('open', () => {
+//   console.log("MongoDB database connection established successfully");
+// })
 const canteensRouter = require('./routes/api/canteens');
 const usersRouter = require('./routes/api/users');
 app.use('/canteens', canteensRouter);
 app.use('/users', usersRouter);
 
-const canteensRouter = require('./routes/api/canteens');
+//const canteensRouter = require('./routes/api/canteens');
 //const usersRouter = require('./routes/api/users');
 
 app.use('/canteens', canteensRouter);
