@@ -1,0 +1,20 @@
+.donut {
+    background: url("/images/donut.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+.sponge {
+    background: url("/image/sponge.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}

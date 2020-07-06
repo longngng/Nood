@@ -28,6 +28,14 @@ export default class Homepage extends Component {
         this.setState({sideDrawerOpen: false});
       }
     render() {
+//          drawerToggleClickHandler = () => {
+//     this.setState ((prevState) => {
+//       return {sideDrawerOpen: !prevState.sideDrawerOpen};
+//     });
+//   }
+//   backdropClickHandler = () => {
+//     this.setState({sideDrawerOpen: false});
+//   }
         let sidedrawer;
         let backdrop;
         if (this.state.sideDrawerOpen) {
