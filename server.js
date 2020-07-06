@@ -23,17 +23,17 @@ app.use(cors());
 //Init middleware
 app.use(express.json({extended: false}));
 
-// const uri = process.env.ATLAS_URI;
-// mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
-// );
-// const connection = mongoose.connection;
-// connection.once('open', () => {
-//   console.log("MongoDB database connection established successfully");
-// })
-// const canteensRouter = require('./routes/api/canteens');
-// const usersRouter = require('./routes/api/users');
-// app.use('/canteens', canteensRouter);
-// app.use('/users', usersRouter);
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
+);
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log("MongoDB database connection established successfully");
+})
+const canteensRouter = require('./routes/api/canteens');
+const usersRouter = require('./routes/api/users');
+app.use('/canteens', canteensRouter);
+app.use('/users', usersRouter);
 
 //Serve static assets in production
 if (process.env.NODE_ENV === 'production') {

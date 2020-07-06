@@ -1,0 +1,90 @@
+.donut {
+    background: url("/images/donut.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+.sponge {
+    background: url("/images/sponge.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+.egg_cake {
+    background: url("/images/egg_cake.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+.waffles {
+    background: url("/images/waffles.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+.burger {
+    background: url("/images/burger.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+.mung_bean {
+    background: url("/images/mung_bean.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+.carrot {
+    background: url("/images/carrot.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+.red_bean {
+    background: url("/images/red_bean.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+.seasame {
+    background: url("/images/seasame.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}

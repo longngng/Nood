@@ -1,0 +1,79 @@
+.res_name {
+    background: none;
+    grid-area: res_name;
+}
+.top_favorit {
+    background: none;
+    grid-area: top_favorit;
+}
+.res_image {
+    background-image: url("/images/Arise_and_shine_S.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: res_image;
+}
+.dish_image {
+
+    background: none;
+    grid-area: dish_image;
+    max-height: 200vh;
+    align-content: center;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+.intro {
+    background: none;
+    grid-area: intro;
+}
+.rating {
+    background: green;
+    grid-area: rating;
+}
+.comment {
+    background: pink;
+    grid-area: comment;
+}
+.background_container{
+    text-align: center;
+    background-color: rgb(241, 213, 217);
+    width: 80%;
+    min-height: 200vh;
+    align-content: center;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-rows: 0.1fr 1fr 1fr 0.1fr 1fr;
+    grid-template-areas: 
+    "res_name top_favorit"
+    "res_image dish_image"
+    "intro dish_image"
+    "rating dish_image"
+    "comment dish_image";
+    grid-gap: 0 rem;
+    margin-top: 60;
+}
+.background{
+    background-color: rgb(241, 213, 217);
+}
+
+@media only screen and (max-width: 768px) {
+    .background_container {
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr 0.1fr 1fr 0.1 1fr;
+        grid-template-areas: 
+        "res_name"
+        "res_image"
+        "intro"
+        "rating"
+        "comment"
+        "top_favorit"
+        "dish_image";
+    }
+    .dish_image {
+        max-height: 60vh; 
+    }
+    h6 {
+        font-size: 200%;
+    }
+}
