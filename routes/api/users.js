@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const normalize = require('normalize-url');
 const config = require('config');
 
-const User = require('../../models/user.model');
+const User = require('../../models/User');
 
 //@route: GET api/users
 //@desc: Test route
