@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Todos from "./component/Todos";
-import Header_1 from "./component/layout/header";
-import Header_2 from "./component/layout/header2";
-import SideDrawer from "./component/layout/SideDrawer";
-import Backdrop from "./component/layout/Backdrop";
-import Footer from "./component/layout/footer";
-import Addtodo from "./component/addTodo";
-import TestInfo from "./component/Res_template/Info/Info";
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Todos from './component/Todos';
+import Header_1 from './component/layout/header';
+import Header_2 from './component/layout/header2';
+import Header_3_1 from './component/layout/header3_1';
+import SideDrawer from './component/layout/SideDrawer';
+import Backdrop from './component/layout/Backdrop';
+import Footer from './component/layout/footer';
+import Addtodo from './component/addTodo';
+import TestInfo from './component/Res_template/Info/Info'
 //import About from './component/layout/about';
 import AboutUs from "./component/pages/Aboutus";
 import NUS_background from "./component/layout/nus_background";
@@ -96,7 +97,10 @@ class App extends Component {
               path="/A_and_S"
               render={(props) => (
                 <React.Fragment>
+<<<<<<< HEAD
+=======
                   <Header_2 />
+>>>>>>> refs/remotes/origin/master
                   {/* <Addtodo/> */}
                   <A_and_S />
                   <Footer />
