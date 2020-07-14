@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Fragment, useEffect } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Todos from "./component/Todos";
@@ -11,6 +11,7 @@ import Addtodo from "./component/addTodo";
 import TestInfo from "./component/Res_template/Info/Info";
 //import About from './component/layout/about';
 import AboutUs from "./component/pages/Aboutus";
+import Navbar from "./component/layout/Navbar";
 import NUS_background from "./component/layout/nus_background";
 import NUS_campuses from "./component/layout/campuses";
 import NUS_campuses2 from "./component/layout/campuses2";
@@ -35,81 +36,89 @@ import Register from "./component/auth/Register";
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
+import { loadUser } from "./actions/auth";
+import setAuthToken from "./utils/setAuthToken";
 
 import Alert from "./component/layout/Alert";
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <Router>
-          <Alert />
-          <div className="App" style={{ height: "100%" }}>
-            <Route path="/" exact component={Homepage} />
-            <Route path="/KentRidge2" component={KentRidge2} />
-            <Route path="/Info" component={TestInfo} />
-            <Route path="/Login" component={Login} />
-            <Route path="/Register" component={Register} />
 
-            <Route
-              exact
-              path="/BukitTimah"
-              render={(props) => (
-                <React.Fragment>
-                  <Header_2 />
-                  <Addtodo />
-                  <BukitTimah />
-                </React.Fragment>
-              )}
-            />
-            <Route
-              exact
-              path="/UTown"
-              render={(props) => (
-                <React.Fragment>
-                  <Header_2 />
-                  <Addtodo />
-                  <UTown />
-                </React.Fragment>
-              )}
-            />
-            <Route
-              exact
-              path="/Aboutus"
-              render={(props) => (
-                <React.Fragment>
-                  <Header_2 />
-                  <AboutUs />
-                </React.Fragment>
-              )}
-            />
-            <Route
-              exact
-              path="/Search_result"
-              render={(props) => (
-                <React.Fragment>
-                  <Search />
-                </React.Fragment>
-              )}
-            />
-            <Route
-              exact
-              path="/A_and_S"
-              render={(props) => (
-                <React.Fragment>
-                  <Header_2 />
-                  {/* <Addtodo/> */}
-                  <A_and_S />
-                  <Footer />
-                </React.Fragment>
-              )}
-            />
-          </div>
-          <script src="./component/layout/control_nav"></script>
-        </Router>
-      </Provider>
-    );
-  }
-}
+const App = () => {
+  useEffect(() => {
+    setAuthToken(localStorage.token);
+    store.dispatch(loadUser());
+  }, []);
+
+  return (
+    <Provider store={store}>
+      <Router>
+        <Alert />
+        <div className="App" style={{ height: "100%" }}>
+          <Navbar />
+          <Route path="/" exact component={Homepage} />
+          <Route path="/KentRidge2" component={KentRidge2} />
+          <Route path="/Info" component={TestInfo} />
+          <Route path="/Login" component={Login} />
+          <Route path="/Register" component={Register} />
+
+          <Route
+            exact
+            path="/BukitTimah"
+            render={(props) => (
+              <React.Fragment>
+                <Header_2 />
+                <Addtodo />
+                <BukitTimah />
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/UTown"
+            render={(props) => (
+              <React.Fragment>
+                <Header_2 />
+                <Addtodo />
+                <UTown />
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/Aboutus"
+            render={(props) => (
+              <React.Fragment>
+                <Header_2 />
+                <AboutUs />
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/Search_result"
+            render={(props) => (
+              <React.Fragment>
+                <Search />
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/A_and_S"
+            render={(props) => (
+              <React.Fragment>
+                <Header_2 />
+                {/* <Addtodo/> */}
+                <A_and_S />
+                <Footer />
+              </React.Fragment>
+            )}
+          />
+        </div>
+        <script src="./component/layout/control_nav"></script>
+      </Router>
+    </Provider>
+  );
+};
+
 export default App;
 //state = {
 //   todos: [
