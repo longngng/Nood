@@ -52,12 +52,6 @@ export default class template_res extends Component {
             <div className="intro">
               <Info />
             </div>
-            <div className="rating">
-              <Star />
-            </div>
-            <div className="comment">
-              <Comment />
-            </div>
           </div>
         </div>
       </div>

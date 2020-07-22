@@ -30,6 +30,7 @@ import UTown from "./component/pages/UTown";
 // import { ReactComponent } from '*.svg';
 import Search from "./component/pages/search";
 import A_and_S from "./component/Res_template/template2_res";
+import A_and_S_std from "./component/Res_template/template_res";
 import Login from "./component/auth/Login";
 import Register from "./component/auth/Register";
 
@@ -75,7 +76,7 @@ const App = () => {
           />
           <PrivateRoute exact path="/add-education" component={AddEducation} />
           <PrivateRoute exact path="/posts" component={Posts} />
-          <PrivateRoute exact path="/A_and_S" component={A_and_S} />
+          <Route exact path="/A_and_S" component={A_and_S} />
           <PrivateRoute exact path="/posts/:id" component={Post} />
 
           <Route
