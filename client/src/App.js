@@ -11,7 +11,6 @@ import Addtodo from "./component/addTodo";
 import TestInfo from "./component/Res_template/Info/Info";
 //import About from './component/layout/about';
 import AboutUs from "./component/pages/Aboutus";
-import Navbar from "./component/layout/Navbar";
 import NUS_background from "./component/layout/nus_background";
 import NUS_campuses from "./component/layout/campuses";
 import NUS_campuses2 from "./component/layout/campuses2";
