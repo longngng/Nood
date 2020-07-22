@@ -8,11 +8,30 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
+        <Link
+          activeClass="active"
+          to="campuses"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="Linkbtn"
+          style={linkStyle}
+        >
+          Explore
+        </Link>
+      </li>
+      <li>
+        <Link style={linkStyle} to="/Aboutus" className="Linkbtn">
+          About
+        </Link>
+      </li>
+      {/* <li>
         <Link to="/profiles">Developers</Link>
       </li>
       <li>
         <Link to="/posts">Posts</Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/dashboard">
           <i className="fas fa-user" />{" "}
@@ -46,7 +65,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className="navbar bg-dark">
       <h1>
         <Link to="/">
-          <i className="fas fa-code" /> DevConnector
+          <i className="fas fa-code" /> 𝓝𝓤𝓢 𝓕𝓸𝓸𝓭
         </Link>
       </h1>
       {!loading && (
@@ -65,4 +84,27 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
+const headerStyle = {
+  color: "#fff",
+  textAlign: "center",
+  position: "fixed",
+  background: "#EF7C00",
+};
+
+const linkStyle = {
+  color: "#fff",
+  textAlign: "center",
+  display: "flex",
+  float: "right",
+};
+const linkStylehead = {
+  color: "#fff",
+  position: "absolute",
+  top: "7px",
+  left: "100px",
+  display: "flex",
+};
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
 export default connect(mapStateToProps, { logout })(Navbar);
