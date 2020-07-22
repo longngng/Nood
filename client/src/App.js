@@ -28,9 +28,17 @@ import BukitTimah from "./component/pages/BukitTimah";
 import UTown from "./component/pages/UTown";
 // import { ReactComponent } from '*.svg';
 import Search from "./component/pages/search";
-import A_and_S from "./component/Res_template/template_res";
+import A_and_S from "./component/Res_template/template2_res";
 import Login from "./component/auth/Login";
 import Register from "./component/auth/Register";
+
+import Dashboard from "./component/dashboard/Dashboard";
+import ProfileForm from "./component/profile-forms/ProfileForm";
+import PrivateRoute from "./component/routing/PrivateRoute";
+import AddExperience from "./component/profile-forms/AddExperience";
+import AddEducation from "./component/profile-forms/AddEducation";
+import Posts from "./component/posts/Posts";
+import Post from "./component/post/Post";
 
 // Redux
 import { Provider } from "react-redux";
@@ -56,6 +64,18 @@ const App = () => {
           <Route path="/Info" component={TestInfo} />
           <Route path="/Login" component={Login} />
           <Route path="/Register" component={Register} />
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
+          <PrivateRoute exact path="/create-profile" component={ProfileForm} />
+          <PrivateRoute exact path="/edit-profile" component={ProfileForm} />
+          <PrivateRoute
+            exact
+            path="/add-experience"
+            component={AddExperience}
+          />
+          <PrivateRoute exact path="/add-education" component={AddEducation} />
+          <PrivateRoute exact path="/posts" component={Posts} />
+          <PrivateRoute exact path="/A_and_S" component={A_and_S} />
+          <PrivateRoute exact path="/posts/:id" component={Post} />
 
           <Route
             exact
@@ -95,18 +115,6 @@ const App = () => {
             render={(props) => (
               <React.Fragment>
                 <Search />
-              </React.Fragment>
-            )}
-          />
-          <Route
-            exact
-            path="/A_and_S"
-            render={(props) => (
-              <React.Fragment>
-                <Header_2 />
-                {/* <Addtodo/> */}
-                <A_and_S />
-                <Footer />
               </React.Fragment>
             )}
           />

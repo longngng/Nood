@@ -5,6 +5,9 @@ const PostSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
   },
+  // canteen: {
+  //   type: Schema.Types.ObjectId,
+  // },
   text: {
     type: String,
     required: true,
