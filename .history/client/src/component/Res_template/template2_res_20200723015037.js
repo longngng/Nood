@@ -26,7 +26,7 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
     let backdrop;
     if (sideDrawerOpen) {
       sidedrawer = <SideDrawer />;
-      backdrop = <Backdrop click={() => backdropClickHandler(!sideDrawerOpen)} />;
+      backdrop = <Backdrop onClick={() => backdropClickHandler(!sideDrawerOpen)} />;
     }
   //   if (isAuthenticated) {
   //     return <Redirect to="/A_and_S_std" />;
@@ -34,10 +34,8 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
   if (isAuthenticated) {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)} />
+        <Header drawerClickHandler={} />
         <Navbar />
-        {sidedrawer}
-        {backdrop}
         <div className="background">
           <br />
           <br />
@@ -72,10 +70,8 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
   } else {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)}/>
+        <Header drawerClickHandler={this.drawerToggleClickHandler} />
         <Navbar />
-        {sidedrawer}
-        {backdrop}
         <div className="background">
           <br />
           <br />

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import "./Res.css";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -20,24 +20,15 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
   useEffect(() => {
     getPosts();
   }, [getPosts]);
-  // const [sideDrawerOpen, drawerToggleClickHandler] = useState(false);
-  const [sideDrawerOpen, backdropClickHandler] = useState(false);
-    let sidedrawer;
-    let backdrop;
-    if (sideDrawerOpen) {
-      sidedrawer = <SideDrawer />;
-      backdrop = <Backdrop click={() => backdropClickHandler(!sideDrawerOpen)} />;
-    }
+
   //   if (isAuthenticated) {
   //     return <Redirect to="/A_and_S_std" />;
   //   }
   if (isAuthenticated) {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)} />
+        <Header drawerClickHandler={this.drawerToggleClickHandler} />
         <Navbar />
-        {sidedrawer}
-        {backdrop}
         <div className="background">
           <br />
           <br />
@@ -72,10 +63,8 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
   } else {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)}/>
+        <Header drawerClickHandler={this.drawerToggleClickHandler} />
         <Navbar />
-        {sidedrawer}
-        {backdrop}
         <div className="background">
           <br />
           <br />

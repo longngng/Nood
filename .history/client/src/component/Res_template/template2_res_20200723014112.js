@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import "./Res.css";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -20,13 +20,23 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
   useEffect(() => {
     getPosts();
   }, [getPosts]);
-  // const [sideDrawerOpen, drawerToggleClickHandler] = useState(false);
-  const [sideDrawerOpen, backdropClickHandler] = useState(false);
-    let sidedrawer;
+  state = {
+    todos: [],
+    sideDrawerOpen: false,
+  };
+  const drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
+  const backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false });
+  };
+  let sidedrawer;
     let backdrop;
-    if (sideDrawerOpen) {
+    if (this.state.sideDrawerOpen) {
       sidedrawer = <SideDrawer />;
-      backdrop = <Backdrop click={() => backdropClickHandler(!sideDrawerOpen)} />;
+      backdrop = <Backdrop click={backdropClickHandler} />;
     }
   //   if (isAuthenticated) {
   //     return <Redirect to="/A_and_S_std" />;
@@ -34,10 +44,8 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
   if (isAuthenticated) {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)} />
+        <Header drawerClickHandler={drawerToggleClickHandler} />
         <Navbar />
-        {sidedrawer}
-        {backdrop}
         <div className="background">
           <br />
           <br />
@@ -72,10 +80,8 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
   } else {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)}/>
+        <Header drawerClickHandler={this.drawerToggleClickHandler} />
         <Navbar />
-        {sidedrawer}
-        {backdrop}
         <div className="background">
           <br />
           <br />

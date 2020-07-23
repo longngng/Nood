@@ -9,9 +9,9 @@ import { Link as LinkComp} from "react-scroll";
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
       <div class = "nav-links">
-        <LinkComp
+        <Link
           activeClass="active"
-          to="nus"
+          to="/"
           spy={true}
           smooth={true}
           offset={0}
@@ -20,10 +20,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           style={linkStyle}
         >
           <h4>Home</h4>
-        </LinkComp>
-        <LinkComp
+        </Link>
+        <Link
           activeClass="active"
-          to="campuses"
+          to="/KentRidge2"
           spy={true}
           smooth={true}
           offset={0}
@@ -31,8 +31,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           className="Linkbtn"
           style={linkStyle}
         >
-         <h5>Explore</h5> 
-        </LinkComp>
+         <h5>Kent Ridge</h5> 
+        </Link>
 
         <Link style={linkStyle} to="/Aboutus" className="Linkbtn">
           <h5>About</h5>
@@ -50,9 +50,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <div class="nav-links">
-        <LinkComp
+        <Link
           activeClass="active"
-          to="nus"
+          to="/"
           spy={true}
           smooth={true}
           offset={0}
@@ -61,10 +61,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           style={linkStyle}
         >
           <h4>Home</h4>
-        </LinkComp>
-        <LinkComp
+        </Link>
+        <Link
           activeClass="active"
-          to="campuses"
+          to="/KentRidge2"
           spy={true}
           smooth={true}
           offset={0}
@@ -72,8 +72,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           className="Linkbtn"
           style={linkStyle}
         >
-          <h4>Explore</h4>
-        </LinkComp>
+          <h4>Kent Ridge</h4>
+        </Link>
         <Link style={linkStyle} to="/Aboutus" className="Linkbtn" onClick = {scrollToTop}>
           <h4>About</h4>
         </Link>

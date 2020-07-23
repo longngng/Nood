@@ -8,19 +8,8 @@ import { Link as LinkComp} from "react-scroll";
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-      <div class = "nav-links">
-        <LinkComp
-          activeClass="active"
-          to="nus"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={1000}
-          className="Linkbtn"
-          style={linkStyle}
-        >
-          <h4>Home</h4>
-        </LinkComp>
+    <ul>
+      <li>
         <LinkComp
           activeClass="active"
           to="campuses"
@@ -31,59 +20,41 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           className="Linkbtn"
           style={linkStyle}
         >
-         <h5>Explore</h5> 
+          Explore
         </LinkComp>
-
+      </li>
+      <li>
         <Link style={linkStyle} to="/Aboutus" className="Linkbtn">
-          <h5>About</h5>
+          About
         </Link>
-        <Link style={linkStyle} to="/dashboard" className="Linkbtn">
-          <h5>Dashboard</h5>
+      </li>
+      <li>
+        <Link to="/dashboard">
+          <i className="fas fa-user" />{" "}
+          <span className="hide-sm">Dashboard</span>
         </Link>
-
-        <a onClick={logout} href="#!" style ={linkStyle} className = "Linkbtn">
-          <h5>Logout</h5>
+      </li>
+      <li>
+        <a onClick={logout} href="#!">
+          <i className="fas fa-sign-out-alt" />{" "}
+          <span className="hide-sm">Logout</span>
         </a>
- 
-    </div>
+      </li>
+    </ul>
   );
 
   const guestLinks = (
-    <div class="nav-links">
-        <LinkComp
-          activeClass="active"
-          to="nus"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={1000}
-          className="Linkbtn"
-          style={linkStyle}
-        >
-          <h4>Home</h4>
-        </LinkComp>
-        <LinkComp
-          activeClass="active"
-          to="campuses"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={1000}
-          className="Linkbtn"
-          style={linkStyle}
-        >
-          <h4>Explore</h4>
-        </LinkComp>
-        <Link style={linkStyle} to="/Aboutus" className="Linkbtn" onClick = {scrollToTop}>
-          <h4>About</h4>
-        </Link>
-        <Link style={linkStyle} to="/Register" className="Linkbtn" onClick = {scrollToTop}>
-          <h4>Register</h4>
-        </Link>
-        <Link style={linkStyle} to="/Login" className="Linkbtn" onClick = {scrollToTop}>
-          <h4>Login</h4>
-        </Link>
-      </div>
+    <ul>
+      <li>
+        <Link to="/profiles">Developers</Link>
+      </li>
+      <li>
+        <Link to="/register">Register</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
+    </ul>
   );
 
   return (

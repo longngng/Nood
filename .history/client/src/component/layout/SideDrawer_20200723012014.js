@@ -36,9 +36,9 @@ const SideDrawer = ({ auth: { isAuthenticated, loading }, logout }) => {
                 </Linkroute>
                 </li>
                 <li>
-                    <a onClick={logout} href="#!" style ={linkStyle} className = "Linkbtn">
-                    <h5>Logout</h5>
-                    </a>
+                <a onClick={logout} href="#!" style ={linkStyle} className = "Linkbtn">
+                <h5>Logout</h5>
+                </a>
                 </li>
         </ul>
     );

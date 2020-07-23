@@ -21,7 +21,7 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
     getPosts();
   }, [getPosts]);
   // const [sideDrawerOpen, drawerToggleClickHandler] = useState(false);
-  const [sideDrawerOpen, backdropClickHandler] = useState(false);
+  const [sideDrawerOpen, backdropClickHandler] = useState(true);
     let sidedrawer;
     let backdrop;
     if (sideDrawerOpen) {

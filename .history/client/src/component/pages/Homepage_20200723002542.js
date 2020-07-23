@@ -35,7 +35,6 @@ export default class Homepage extends Component {
     return (
       <div>
         <Header_1 drawerClickHandler={this.drawerToggleClickHandler} />
-        <Navbar/>
         {sidedrawer}
         {backdrop}
         <NUS_background />

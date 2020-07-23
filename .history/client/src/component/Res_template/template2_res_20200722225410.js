@@ -1,12 +1,12 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import "./Res.css";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Star from "../StarRating/StarRating";
 import Dish_1 from "./List_of_dishes/Dishes";
 import Info from "./Info/Info";
-import Header from "../layout/header";
-import Navbar from "../layout/Navbar3";
+import Header from "../layout/header3_1";
+import Navbar from "../layout/Navbar";
 import SideDrawer from "../layout/SideDrawer3_1";
 import Backdrop from "../layout/Backdrop";
 import Comment from "../Res_template/PostForm/PostForm";
@@ -20,24 +20,14 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
   useEffect(() => {
     getPosts();
   }, [getPosts]);
-  // const [sideDrawerOpen, drawerToggleClickHandler] = useState(false);
-  const [sideDrawerOpen, backdropClickHandler] = useState(false);
-    let sidedrawer;
-    let backdrop;
-    if (sideDrawerOpen) {
-      sidedrawer = <SideDrawer />;
-      backdrop = <Backdrop click={() => backdropClickHandler(!sideDrawerOpen)} />;
-    }
+
   //   if (isAuthenticated) {
   //     return <Redirect to="/A_and_S_std" />;
   //   }
   if (isAuthenticated) {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)} />
         <Navbar />
-        {sidedrawer}
-        {backdrop}
         <div className="background">
           <br />
           <br />
@@ -72,10 +62,7 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
   } else {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)}/>
         <Navbar />
-        {sidedrawer}
-        {backdrop}
         <div className="background">
           <br />
           <br />

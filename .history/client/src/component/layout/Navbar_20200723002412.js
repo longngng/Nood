@@ -6,7 +6,7 @@ import { logout } from "../../actions/auth";
 import DrawToggleButton from "./drawToggleButton";
 import { Link as LinkComp} from "react-scroll";
 
-const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+const Navbar = ({ auth: { isAuthenticated, loading }, logout },props) => {
   const authLinks = (
       <div class = "nav-links">
         <LinkComp
@@ -18,6 +18,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           duration={1000}
           className="Linkbtn"
           style={linkStyle}
+          onClick = {scrollToTop}
         >
           <h4>Home</h4>
         </LinkComp>
@@ -37,7 +38,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <Link style={linkStyle} to="/Aboutus" className="Linkbtn">
           <h5>About</h5>
         </Link>
-        <Link style={linkStyle} to="/dashboard" className="Linkbtn">
+        <Link to="/dashboard" style = {linkStyle} className = "Linkbtn">
           <h5>Dashboard</h5>
         </Link>
 
@@ -49,6 +50,28 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   const guestLinks = (
+    // <ul>
+    //   <li>
+    //     <LinkComp
+    //       activeClass="active"
+    //       to="campuses"
+    //       spy={true}
+    //       smooth={true}
+    //       offset={0}
+    //       duration={1000}
+    //       className="Linkbtn"
+    //       style={linkStyle}
+    //     >
+    //      <h5>Explore</h5> 
+    //     </LinkComp>
+    //   </li>
+    //   <li>
+    //     <Link to="/register">Register</Link>
+    //   </li>
+    //   <li>
+    //     <Link to="/login">Login</Link>
+    //   </li>
+    // </ul>
     <div class="nav-links">
         <LinkComp
           activeClass="active"
@@ -59,6 +82,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           duration={1000}
           className="Linkbtn"
           style={linkStyle}
+          onClick = {scrollToTop}
         >
           <h4>Home</h4>
         </LinkComp>
@@ -88,6 +112,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <nav style = {headerStyle}>
+      <div class="res_button">
+        <DrawToggleButton click={props.drawerClickHandler} />
+      </div>
       <Link
         activeClass="active"
         to="/"

@@ -37,9 +37,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <Link style={linkStyle} to="/Aboutus" className="Linkbtn">
           <h5>About</h5>
         </Link>
-        <Link style={linkStyle} to="/dashboard" className="Linkbtn">
-          <h5>Dashboard</h5>
-        </Link>
+        
 
         <a onClick={logout} href="#!" style ={linkStyle} className = "Linkbtn">
           <h5>Logout</h5>

@@ -1,49 +1,12 @@
-import React, { Fragment } from 'react'
+import React, { Component } from 'react'
 import {Link as Linkroute} from 'react-router-dom';
 import {Link } from 'react-scroll';
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { logout } from "../../actions/auth";
 
 const SideDrawer = ({ auth: { isAuthenticated, loading }, logout }) => {
-    const authLinks = (
-        <ul>
-            <img className = "logoimg"src = "/images/NoodLogo.png"></img>
-                <li><Link
-                    activeClass="active"
-                    to="nus"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration= {1000}
-                    className = "Linkbtn"
-                    style = {linkStyle}
-                ><h5>Home</h5></Link></li>
-                <li><Link
-                    activeClass="active"
-                    to="campuses"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration= {1000}
-                    className = "Linkbtn"
-                    style = {linkStyle}
-                ><h5>Explore</h5></Link></li>
-                <li><Linkroute style = {linkStyle} to = "/Aboutus" className = "Linkbtn" ><h5>About</h5></Linkroute></li>
-                <li>
-                    <Linkroute to="/dashboard" style = {linkStyle} className = "Linkbtn">
-                <h5>Dashboard</h5>
-                </Linkroute>
-                </li>
-                <li>
-                    <a onClick={logout} href="#!" style ={linkStyle} className = "Linkbtn">
-                    <h5>Logout</h5>
-                    </a>
-                </li>
-        </ul>
-    );
-    const guestLinks = (
-        <ul>
+        return (
+            <div className = "side-drawer">
+                <ul>
                 <img className = "logoimg"src = "/images/NoodLogo.png"></img>
                 <li><Link
                     activeClass="active"
@@ -69,13 +32,6 @@ const SideDrawer = ({ auth: { isAuthenticated, loading }, logout }) => {
                 <li><Linkroute style = {linkStyle} to = "/Register" className = "Linkbtn" ><h5>Register</h5></Linkroute></li>
                 <li><Linkroute style = {linkStyle} to = "/Login" className = "Linkbtn" ><h5>Login</h5></Linkroute></li>
                 </ul>
-    )
-
-        return (
-            <div className = "side-drawer">
-               {!loading && (
-                    <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-                )}
             </div>
         )
 }

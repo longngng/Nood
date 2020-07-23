@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Component } from 'react'
 import {Link as Linkroute} from 'react-router-dom';
 import {Link } from 'react-scroll';
 import PropTypes from "prop-types";
@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { logout } from "../../actions/auth";
 
 const SideDrawer = ({ auth: { isAuthenticated, loading }, logout }) => {
-    const authLinks = (
+    const authLiks = (
         <ul>
             <img className = "logoimg"src = "/images/NoodLogo.png"></img>
                 <li><Link
@@ -36,9 +36,9 @@ const SideDrawer = ({ auth: { isAuthenticated, loading }, logout }) => {
                 </Linkroute>
                 </li>
                 <li>
-                    <a onClick={logout} href="#!" style ={linkStyle} className = "Linkbtn">
-                    <h5>Logout</h5>
-                    </a>
+                <a onClick={logout} href="#!" style ={linkStyle} className = "Linkbtn">
+                <h5>Logout</h5>
+                </a>
                 </li>
         </ul>
     );

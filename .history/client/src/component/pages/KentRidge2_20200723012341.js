@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Header_2 from '../layout/header';
+import Header_2 from '../layout/header2';
 import Footer from '../layout/footer';
 import SideDrawer2 from '../layout/SideDrawer2';
-import Navbar from "../layout/Navbar2";
+import Navbar from "../layout/Navbar";
 
 import Backdrop from '../layout/Backdrop';
 export default class KentRidge2 extends Component {
