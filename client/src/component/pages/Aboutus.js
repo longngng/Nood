@@ -1,13 +1,52 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import Footer from "../layout/footer";
+import { Link } from "react-router-dom";
 
 export default class about extends Component {
-    render() {
-        return (
-            <div className = "about_background" id = "about">
-                <h6>All about our project</h6>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <div className="about_background" id="about">
+          <h6> About the project</h6>
+          <p>The website is dedicated to all the food lovers here at NUS</p>
+          <h6> About the team</h6>
+
+          <div className="container2">
+            <p>
+              <h1>Long NGUYEN</h1>
+
+              <a href="mailto:longnguyen@u.nus.edu">
+                {" "}
+                Email: longnguyen@u.nus.edu{" "}
+              </a>
+              <br></br>
+              <a
+                href="https://www.linkedin.com/in/long-nguyen-2004441a2/ "
+                target="_blank"
+              >
+                Linkedin
+              </a>
+              <br></br>
+              <a href="https://github.com/longngng" target="_blank">
+                Github
+              </a>
+            </p>
+
+            <p>
+              <a href="mailto:tqmthong@u.nus.edu"> Email: tqmthong</a>
+              <br></br>
+              <a href="https://www.linkedin.com/ " target="_blank">
+                Linkedin
+              </a>
+              <br></br>
+              <a href="https://github.com/" target="_blank">
+                Github
+              </a>
+            </p>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 }
