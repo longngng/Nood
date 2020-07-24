@@ -59,16 +59,17 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
             <div className="rating">
               <Star />
             </div>
+            <div className="comment">
+              {posts.map((post) => {
+                console.log("TestDeptrai");
+                console.log(post);
+                return <PostItem key={post._id} post={post} />;
+              })}
+            </div>
+            <div className="posting">
+              <PostForm />
+            </div>
           </div>
-        </div>
-
-        <PostForm />
-        <div className="posts">
-          {posts.map((post) => {
-            console.log("TestDeptrai");
-            console.log(post);
-            return <PostItem key={post._id} post={post} />;
-          })}
         </div>
       </Fragment>
     );
@@ -99,8 +100,12 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
               <Info />
             </div>
             <div className="rating">
-              <Star />
+              <p>
+                Please <a href="/Login">Log in</a> or{" "}
+                <a href="Register">Sign up</a> to rate and comment
+              </p>
             </div>
+            <div className="comment"></div>
           </div>
         </div>
 
