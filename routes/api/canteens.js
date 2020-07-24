@@ -1,13 +1,13 @@
-const router = require('express').Router();
-let Canteen = require('../../models/canteen.model');
+const router = require("express").Router();
+let Canteen = require("../../models/canteen.model");
 
-router.route('/').get((req, res) => {
+router.route("/").get((req, res) => {
   Canteen.find()
-    .then(canteens => res.json(canteens))
-    .catch(err => res.status(400).json('Error: ' + err));
+    .then((canteens) => res.json(canteens))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route('/add').post((req, res) => {
+router.route("/add").post((req, res) => {
   //const canteenname = req.body.canteenname;
   //const description = req.body.description;
   const name = req.body.name;
@@ -17,33 +17,56 @@ router.route('/add').post((req, res) => {
   const rating_num = req.body.rating_num;
   const img_link = req.body.img_link;
   const review = req.body.review;
-  const campus = req.body.campus
+  const campus = req.body.campus;
   //const newCanteen = new Canteen({canteenname, description});
-  const newCanteen = new Canteen({name, sig_dish, desc, rating, rating_num, review, img_link,campus});
-  newCanteen.save()
-    .then(() => res.json('Canteen added!'))
-    .catch(err => res.status(400).json('Error: ' + err));
+  const newCanteen = new Canteen({
+    name,
+    sig_dish,
+    desc,
+    rating,
+    rating_num,
+    review,
+    img_link,
+    campus,
+  });
+  newCanteen
+    .save()
+    .then(() => res.json("Canteen added!"))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route('/search').post((req, res) => {
+router.route("/search").post((req, res) => {
   const searchkey = req.body.searchkey;
   //{"rating" : 3}
   //Canteen.find({"rating" : searchkey})
-  Canteen.find({$text: {$search: searchkey}})
-    .then(canteens => {
+  Canteen.find({ $text: { $search: searchkey } })
+    .then((canteens) => {
       res.json(canteens);
     })
-    .catch(err => res.status(400).json('Error: ' + err));
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route('/rate').post((req,res) => {
-  const canteenId = req.params.id;
-  Canteen.findById(canteenId) .then (
-    canteen => {
-      
-    }
-  )
+// router.route('/rate').post((req,res) => {
+//   const canteenId = req.params.id;
+//   Canteen.findById(canteenId) .then (
+//     canteen => {
 
-})
+//     }
+//   )
+// })
+
+router.route("/update/:id").post((req, res) => {
+  Canteen.findById(req.params.id)
+    .then((canteen) => {
+      canteen.rating += req.body.rating;
+      canteen.rating_num += 1;
+
+      canteen
+        .save()
+        .then(() => res.json("Canteen updated!"))
+        .catch((err) => res.status(400).json("Error: " + err));
+    })
+    .catch((err) => res.status(400).json("Error: " + err));
+});
 
 module.exports = router;

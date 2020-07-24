@@ -108,14 +108,6 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
             <div className="comment"></div>
           </div>
         </div>
-
-        <h2>
-          <Link to="/Login">Login</Link> to comment
-        </h2>
-        <h2>
-          Or if you don't have account,{" "}
-          <Link to="/Register">Regsiter here</Link>{" "}
-        </h2>
       </Fragment>
     );
   }
