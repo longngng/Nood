@@ -16,25 +16,25 @@ import { getPosts } from "../../actions/post";
 import { login } from "../../actions/auth";
 import { Redirect } from "react-router-dom";
 
-const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
+const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
   useEffect(() => {
     getPosts();
-  }, [getPosts]);
+  }, [getPosts, loading]);
   // const [sideDrawerOpen, drawerToggleClickHandler] = useState(false);
   const [sideDrawerOpen, backdropClickHandler] = useState(false);
-    let sidedrawer;
-    let backdrop;
-    if (sideDrawerOpen) {
-      sidedrawer = <SideDrawer />;
-      backdrop = <Backdrop click={() => backdropClickHandler(!sideDrawerOpen)} />;
-    }
-  //   if (isAuthenticated) {
-  //     return <Redirect to="/A_and_S_std" />;
-  //   }
-  if (isAuthenticated) {
+  let sidedrawer;
+  let backdrop;
+  if (sideDrawerOpen) {
+    sidedrawer = <SideDrawer />;
+    backdrop = <Backdrop click={() => backdropClickHandler(!sideDrawerOpen)} />;
+  }
+
+  if (isAuthenticated && loading === false) {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)} />
+        <Header
+          drawerClickHandler={() => backdropClickHandler(!sideDrawerOpen)}
+        />
         <Navbar />
         {sidedrawer}
         {backdrop}
@@ -63,16 +63,20 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated }) => {
 
         <PostForm />
         <div className="posts">
-          {posts.map((post) => (
-            <PostItem key={post._id} post={post} />
-          ))}
+          {posts.map((post) => {
+            console.log("TestDeptrai");
+            console.log(post);
+            return <PostItem key={post._id} post={post} />;
+          })}
         </div>
       </Fragment>
     );
   } else {
     return (
       <Fragment>
-        <Header drawerClickHandler = {() => backdropClickHandler(!sideDrawerOpen)}/>
+        <Header
+          drawerClickHandler={() => backdropClickHandler(!sideDrawerOpen)}
+        />
         <Navbar />
         {sidedrawer}
         {backdrop}
@@ -114,6 +118,7 @@ Posts.propTypes = {
 const mapStateToProps = (state) => ({
   post: state.post,
   isAuthenticated: state.auth.isAuthenticated,
+  loading: state.auth.loading,
 });
 
 export default connect(mapStateToProps, { getPosts })(Posts);

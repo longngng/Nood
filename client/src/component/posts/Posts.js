@@ -18,9 +18,11 @@ const Posts = ({ getPosts, post: { posts } }) => {
       </p>
       <PostForm />
       <div className="posts">
-        {posts.map((post) => (
-          <PostItem key={post._id} post={post} />
-        ))}
+        {posts.map((post) => {
+          console.log("TestDeptrai");
+          console.log(post);
+          return <PostItem key={post._id} post={post} />;
+        })}
       </div>
     </Fragment>
   );
