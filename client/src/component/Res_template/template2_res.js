@@ -15,6 +15,7 @@ import PostForm from "./PostForm";
 import { getPosts } from "../../actions/post";
 import { login } from "../../actions/auth";
 import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
   useEffect(() => {
@@ -103,7 +104,13 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
           </div>
         </div>
 
-        <h2>Login to comment</h2>
+        <h2>
+          <Link to="/Login">Login</Link> to comment
+        </h2>
+        <h2>
+          Or if you don't have account,{" "}
+          <Link to="/Register">Regsiter here</Link>{" "}
+        </h2>
       </Fragment>
     );
   }
