@@ -58,17 +58,19 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
             <div className="rating">
               <Star />
             </div>
-            <div className="comment">
-              {posts.map((post) => {
-                console.log("TestDeptrai");
-                console.log(post);
-                return <PostItem key={post._id} post={post} />;
-              })}
-            </div>
-            <div className = "posting">
-              <PostForm/>
-            </div>
           </div>
+        </div>
+
+        
+        <div className="comment">
+          {posts.map((post) => {
+            console.log("TestDeptrai");
+            console.log(post);
+            return <PostItem key={post._id} post={post} />;
+          })}
+        </div>
+        <div className = "posting">
+          <PostForm/>
         </div>
       </Fragment>
     );
