@@ -100,16 +100,6 @@ const StarRating = (props) => {
         }}
         onClick={onSubmit}
       />
-
-      <form onSubmit={onSubmit} style={{ display: "flex", position: "fixed" }}>
-        <input
-          type="submit"
-          value="Submit"
-          className="btN"
-          style={{ width: "20%" }}
-        />
-      </form>
-
       <div>
         {posts.map((element) => {
           if (element.name === "Arise and Shine") {

@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from "react";
 import axios from 'axios';
+import Rating from './rating';
+
 import {
   GoogleMap,
   useLoadScript,
@@ -160,8 +162,11 @@ export default function Info() {
           posts.map ((element) => {
             if (element.name === "Arise and Shine") {
               return (
+                <div>
                 <p>The current rating for this restaurant is {element.rating === 0 ? element.rating : Math.round((element.rating/element.rating_num) * 100) / 100}
                 </p>
+                <Rating value = {element.rating === 0 ? element.rating : element.rating/element.rating_num}/>
+                </div>
               )
             }
           })

@@ -41,9 +41,9 @@ const PostItem = ({
             type="button"
             className="btn btn-light"
           >
-            <i className="fas fa-thumbs-down" />
+            <i className="fas fa-thumbs-down"/>
           </button>
-          <Link to={`/posts/${_id}`} className="btn ">
+          <Link to={`/posts/${_id}`} className="btn " onClick = {scrollToTop}>
             <h8>Discussion</h8>{" "}
             {comments.length > 0 && (
               <span className="comment-count">{comments.length}</span>
@@ -80,7 +80,9 @@ PostItem.propTypes = {
 const mapStateToProps = (state) => ({
   auth: state.auth,
 });
-
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
 export default connect(mapStateToProps, { addLike, removeLike, deletePost })(
   PostItem
 );

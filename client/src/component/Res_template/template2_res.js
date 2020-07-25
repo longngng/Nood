@@ -13,9 +13,7 @@ import Comment from "../Res_template/PostForm/PostForm";
 import PostItem from "./PostItem";
 import PostForm from "./PostForm";
 import { getPosts } from "../../actions/post";
-import { login } from "../../actions/auth";
-import { Redirect } from "react-router-dom";
-import { Link } from "react-router-dom";
+import Footer from "../layout/footer";
 
 const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
   useEffect(() => {
@@ -71,6 +69,7 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
             </div>
           </div>
         </div>
+        <Footer/>
       </Fragment>
     );
   } else {
@@ -105,9 +104,9 @@ const Posts = ({ getPosts, post: { posts }, isAuthenticated, loading }) => {
                 <a href="Register">Sign up</a> to rate and comment
               </p>
             </div>
-            <div className="comment"></div>
           </div>
         </div>
+        <Footer/>
       </Fragment>
     );
   }

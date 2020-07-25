@@ -7,6 +7,7 @@ import PostItem from "../posts/PostItem";
 import CommentForm from "../post/CommentForm";
 import CommentItem from "../post/CommentItem";
 import { getPost } from "../../actions/post";
+import Footer from "../layout/footer";
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
@@ -16,9 +17,10 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
   return loading || post === null ? (
     <Spinner />
   ) : (
+    <div className = "bg-postItem" style = {{height: '100vh', overflow: 'scroll'}}> 
     <Fragment>
-      <Link to="/posts" className="btn">
-        Back To Posts
+      <Link to="/A_and_S" className="Linkbtn">
+        <h4>Back To Main Session</h4>
       </Link>
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />
@@ -27,7 +29,10 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
           <CommentItem key={comment._id} comment={comment} postId={post._id} />
         ))}
       </div>
+      
     </Fragment>
+    <Footer/>
+    </div>
   );
 };
 
