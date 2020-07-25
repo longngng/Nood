@@ -46,15 +46,13 @@ const StarRating = (props) => {
 
     const id = "5ef0e33f12eb1a35884348ed"; //id of Arise and Shine
 
-    axios
-      .post("http://localhost:5000/canteens/update/" + id, Rate)
-      .then((res) => {
-        if (res.data.success) {
-          setUpdate("");
-          props.refreshFunction(res.data.result);
-        } else {
-        }
-      });
+    axios.post("canteens/update/" + id, Rate).then((res) => {
+      if (res.data.success) {
+        setUpdate("");
+        props.refreshFunction(res.data.result);
+      } else {
+      }
+    });
     window.location.reload();
   };
   // render () {
