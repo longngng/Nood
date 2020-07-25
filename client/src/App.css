@@ -1,5 +1,6 @@
 .bg-postItem {
   background-color: rgba(207, 206, 125, 0.637);
+
 }
 h8 {
   color: aliceblue;
@@ -223,10 +224,10 @@ nav {
   margin: 0px;
   align-items: center;
   justify-content: space-around;
-  min-height: 7vh;
+  min-height: 6vh;
   letter-spacing: 5px;
   font-size: 20px;
-  max-height: 7vh;
+  /* max-height: 7vh; */
   text-align: center;
 }
 
@@ -253,7 +254,7 @@ nav {
 
 form {
   width: 100%;
-  top: 40px;
+  top: 6vh;
   z-index: 3;
   /* display: flex; */
 }
