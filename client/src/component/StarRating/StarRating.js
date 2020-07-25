@@ -12,7 +12,7 @@ const StarRating = (props) => {
   const [update, setUpdate] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/canteens")
+      .get("canteens/")
       .then((res) => {
         console.log(res);
         setPosts(res.data);
@@ -21,7 +21,7 @@ const StarRating = (props) => {
         console.log(err);
       });
     axios
-      .post("http://localhost:5000/canteens")
+      .post("canteens/")
       .then((res) => {
         console.log(res);
         //setRating(res.data);
