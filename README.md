@@ -46,7 +46,7 @@ Our target is to construct a website that provides comprehensive information abo
 
 ### General diagram of the website: 
 
-<img src = "https://drive.google.com/file/d/1u_vZSHO0T1R6Flmh5v9wcJHL1568XkIQ/view?usp=sharing" width = "900" height = "300">
+<img src = "/images/Nood_diagram" width = "900" height = "300">
 
 ### Testing interview and implementaion: 
 
