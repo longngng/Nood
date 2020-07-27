@@ -31,7 +31,7 @@ Our target is to construct a website that provides comprehensive information abo
 #### By 1 August (Milestone 3):
 - User login system with Google sign-in function
 - Review and rating about a dining place
-- Star rating for the food outlets
+- Having a map with searching tool to locate the restaurant
 
 ### Tech stack
 - Front-end:
