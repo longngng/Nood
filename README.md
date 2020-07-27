@@ -44,5 +44,13 @@ Our target is to construct a website that provides comprehensive information abo
 1. Go to folder `./client` and run `npm install` to install dependencies, then `npm start`
 2. To run the server, at home directory, install dependencies by `npm install express cors mongoose dotenv`. Start the server by `nodemon server`.
 
+### General diagram of the website: 
 
+<img src = "https://drive.google.com/file/d/1u_vZSHO0T1R6Flmh5v9wcJHL1568XkIQ/view?usp=sharing" width = "900" height = "300">
 
+### Testing interview and implementaion: 
+
+- Feedback1: Ratings of the outlets should be displayed with additional graphic instead of mere numbers. Status: resolved
+- Feedback2: There is an urgent need for an additional searching tool over the Google Map widget. Status: resolved
+- Feedback3: General feedbacks on the use of colors in the website. Status: resolved
+- Feedback4: People need to reply to existing comments. Status: resolved
