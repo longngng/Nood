@@ -31,8 +31,7 @@ Our target is to construct a website that provides comprehensive information abo
 #### By 1 August (Milestone 3):
 - User login system with Google sign-in function
 - Review and rating about a dining place
-- Popularity system for users 
-- (Pseudo) Machine-learning to suggest food for meal
+- Star rating for the food outlets
 
 ### Tech stack
 - Front-end:
