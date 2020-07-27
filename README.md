@@ -48,7 +48,7 @@ Our target is to construct a website that provides comprehensive information abo
 
 <img src = "https://github.com/longngng/Nood/blob/master/client/public/images/Nood_diagram.png">
 
-### Testing interview and implementaion: 
+### Testers' feedbacks and implementaions: 
 
 - Feedback1: Ratings of the outlets should be displayed with additional graphic instead of mere numbers. Status: `resolved`
 - Feedback2: There is an urgent need for an additional searching tool over the Google Map widget. Status: `resolved`
