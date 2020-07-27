@@ -31,7 +31,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
       </div>
       
     </Fragment>
-    {/* <Footer/> */}
+    <Footer/>
     </div>
   );
 };

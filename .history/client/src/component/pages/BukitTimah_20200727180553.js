@@ -107,7 +107,7 @@ export default class KentRidge2 extends Component {
                     />
                 </form>  
                 
-                <div className = "halfKR" id = "KR">
+                <div className = "halfBT" id = "BT">
                     <h3>𝙺𝚎𝚗𝚝 𝚁𝚒𝚍𝚐𝚎 𝙲𝚊𝚖𝚙𝚞𝚜</h3>
                 </div>
 
@@ -116,7 +116,7 @@ export default class KentRidge2 extends Component {
                     <div className = "container">
                             {this.state.canteenDisplay.map((element) => 
                                 {
-                                    if (element.campus === "Kent Ridge") 
+                                    if (element.campus === "Bukit Timah") 
                                     return (
     
                                 <div>

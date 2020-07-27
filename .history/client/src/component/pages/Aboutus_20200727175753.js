@@ -7,7 +7,6 @@ export default class about extends Component {
     return (
       <div>
         <div className="about_background" id="about">
-        
           <h9> About the project</h9>
           <p>
           <pre>

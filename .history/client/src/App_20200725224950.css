@@ -1,15 +1,6 @@
-pre{
-  color: aliceblue;
-}
 .bg-postItem {
   background-color: rgba(207, 206, 125, 0.637);
 
-}
-h9 {
-  color: rgb(19, 33, 46);
-  margin-top: 15vh;
-  background-color: none;
-  font-size: 600%;
 }
 h8 {
   color: aliceblue;
@@ -101,11 +92,13 @@ a {
   padding: 7px 10px;
   font-size: 80%;
   font-weight: normal;
-  /* max-height: 6vh; */
+  max-height: 6vh;
   /* min-width: 10vw; */
   text-align: center;
   align-items: center;
   margin-top: 0.3rem;
+  /* height: 100%; */
+  /* min-width: 8vw; */
   border: none;
 }
 
@@ -181,7 +174,6 @@ h7 {
   /* padding-top: 390px; */
   /* padding-top: 95%; */
   color: rgb(201, 28, 28);
-  /* color: #FFDF99; */
   background: rgba(63, 206, 163, 0.438);
   background-position: cover;
 }
@@ -189,7 +181,6 @@ h7 {
   /* padding-top: 465px; */
   /* padding-top: 95%; */
   color: rgb(158, 10, 10);
-  /* color: #FFDF99; */
   background: rgba(63, 206, 163, 0.438);
   /* position: absolute;
   top: 469px; */
@@ -410,8 +401,7 @@ h3 {
 }
 
 .halfBT h3 {
-  /* color: turquoise; */
-  color: black;
+  color: turquoise;
   background: rgba(204, 150, 49, 0.486);
 }
 

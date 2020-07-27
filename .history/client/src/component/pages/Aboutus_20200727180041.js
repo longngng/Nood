@@ -7,7 +7,7 @@ export default class about extends Component {
     return (
       <div>
         <div className="about_background" id="about">
-        
+        <div className = "about_countainer"> 
           <h9> About the project</h9>
           <p>
           <pre>
@@ -47,6 +47,7 @@ export default class about extends Component {
                 <pre>Github</pre>
               </a>
             </p>
+            </div>
           </div>
         </div>
         <Footer />

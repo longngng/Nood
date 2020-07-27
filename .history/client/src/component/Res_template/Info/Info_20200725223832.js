@@ -114,7 +114,7 @@ export default function Info() {
               }}
             />
           ))}
-{/*   
+  
           {selected ? (
             <InfoWindow
               position={{ lat: selected.lat, lng: selected.lng }}
@@ -132,7 +132,7 @@ export default function Info() {
                 <p>Spotted {formatRelative(selected.time, new Date())}</p>
               </div>
             </InfoWindow>
-          ) : null} */}
+          ) : null}
         </GoogleMap>
         <div> {
           posts.map ((element) => {

@@ -113,6 +113,7 @@ export default class KentRidge2 extends Component {
 
 
                 <div className =  "banana_background">
+                    {/* <img src="/images/Atempo.jpg" alt="Girl in a jacket" width="500" height="600"/> */}
                     <div className = "container">
                             {this.state.canteenDisplay.map((element) => 
                                 {
@@ -128,6 +129,10 @@ export default class KentRidge2 extends Component {
                                 }
                             )}                                  
                     </div>
+                                
+                    {/* <ul>                       
+                        {this.state.canteenDisplay.map(element => <li>{element.name}</li>)}
+                    </ul> */}
                 </div>
             
                 <Footer/>

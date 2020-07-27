@@ -1,15 +1,11 @@
-pre{
-  color: aliceblue;
-}
 .bg-postItem {
   background-color: rgba(207, 206, 125, 0.637);
 
 }
 h9 {
   color: rgb(19, 33, 46);
-  margin-top: 15vh;
-  background-color: none;
-  font-size: 600%;
+  background-color: rgba(210, 105, 30, 0.466);
+  font-size: 600%
 }
 h8 {
   color: aliceblue;
@@ -172,6 +168,8 @@ h1 {
 h6 {
   /* font-size: 80px; */
   font-size: 400%;
+  color: aliceblue;
+  background-color: rgba(210, 105, 30, 0.466);
   /* padding-top: 60px; */
 }
 h7 {
@@ -410,8 +408,7 @@ h3 {
 }
 
 .halfBT h3 {
-  /* color: turquoise; */
-  color: black;
+  color: turquoise;
   background: rgba(204, 150, 49, 0.486);
 }
 

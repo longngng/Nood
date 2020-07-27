@@ -410,11 +410,12 @@ h3 {
 }
 
 .halfBT h3 {
-  /* color: turquoise; */
-  color: black;
+  color: turquoise;
   background: rgba(204, 150, 49, 0.486);
 }
-
+.about_container {
+  width: 80%;
+}
 .about_background {
   display: flex;
   flex-direction: column;

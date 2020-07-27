@@ -1,4 +1,4 @@
-pre{
+.pre{
   color: aliceblue;
 }
 .bg-postItem {
@@ -7,9 +7,8 @@ pre{
 }
 h9 {
   color: rgb(19, 33, 46);
-  margin-top: 15vh;
-  background-color: none;
-  font-size: 600%;
+  background-color: rgba(210, 105, 30, 0.466);
+  font-size: 600%
 }
 h8 {
   color: aliceblue;
@@ -410,8 +409,7 @@ h3 {
 }
 
 .halfBT h3 {
-  /* color: turquoise; */
-  color: black;
+  color: turquoise;
   background: rgba(204, 150, 49, 0.486);
 }
 

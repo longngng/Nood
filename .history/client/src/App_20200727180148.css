@@ -7,7 +7,7 @@ pre{
 }
 h9 {
   color: rgb(19, 33, 46);
-  margin-top: 15vh;
+  margin-top: 30vh;
   background-color: none;
   font-size: 600%;
 }
@@ -410,11 +410,12 @@ h3 {
 }
 
 .halfBT h3 {
-  /* color: turquoise; */
-  color: black;
+  color: turquoise;
   background: rgba(204, 150, 49, 0.486);
 }
-
+.about_container {
+  width: 80%;
+}
 .about_background {
   display: flex;
   flex-direction: column;

@@ -1,28 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Header_2 from '../layout/header';
+import Header_2 from '../layout/header2';
 import Footer from '../layout/footer';
-import SideDrawer2 from '../layout/SideDrawer2';
-import Navbar from "../layout/Navbar2";
-
-import Backdrop from '../layout/Backdrop';
-export default class KentRidge2 extends Component {
-    state = {
-        todos: [
-    
-        ],
-        sideDrawerOpen: false,
-    
-      }
-      drawerToggleClickHandler = () => {
-        this.setState ((prevState) => {
-          return {sideDrawerOpen: !prevState.sideDrawerOpen};
-        });
-      }
-      backdropClickHandler = () => {
-        this.setState({sideDrawerOpen: false});
-      }
+export default class BukitTimah extends Component {
     constructor(props) {
         super(props);
         this.onChangeSearchKey = this.onChangeSearchKey.bind(this);
@@ -30,6 +11,7 @@ export default class KentRidge2 extends Component {
         this.state = {
             searchkey: '',
             canteenDisplay: []
+            //listItems,
         }
     }
     componentDidMount() {
@@ -37,6 +19,7 @@ export default class KentRidge2 extends Component {
           .then(response => {
             if (response.data.length > 0) {
               this.setState({
+                // canteenDisplay: response.data.map(canteen => canteen.name),
                 canteenDisplay: response.data,
               })
             }
@@ -65,7 +48,6 @@ export default class KentRidge2 extends Component {
             if (response.data.length > 0) {
                 console.log(response.data);
                 this.setState({
-                    //canteenDisplay : response.data.map(canteen => canteen.name)
                     canteenDisplay: response.data
                 })
             }
@@ -73,23 +55,12 @@ export default class KentRidge2 extends Component {
         .catch(error => {
             console.log(error);
         })
-
     }
     
-
     render() {
-        let sidedrawer;
-        let backdrop;
-        if (this.state.sideDrawerOpen) {
-          sidedrawer = <SideDrawer2/>;
-          backdrop = <Backdrop click = {this.backdropClickHandler}/>;
-        }
         return(
             <div>
-                <Header_2 drawerClickHandler= {this.drawerToggleClickHandler}/>
-                <Navbar/>
-                {sidedrawer}
-                {backdrop}
+                <Header_2/>
                 <form onSubmit = {this.onSubmit} style = {{display: 'flex', position: 'fixed'}}> 
                     <input 
                         type = "text" 
@@ -102,25 +73,26 @@ export default class KentRidge2 extends Component {
                     <input 
                     type="submit" 
                     value = "Submit" 
-                    className ="btN"
+                    className ="btn"
                     style = {{width: '20%'}}
                     />
                 </form>  
                 
-                <div className = "halfKR" id = "KR">
-                    <h3>𝙺𝚎𝚗𝚝 𝚁𝚒𝚍𝚐𝚎 𝙲𝚊𝚖𝚙𝚞𝚜</h3>
+                <div className = "halfBT" id = "BT">
+                    <h3>𝙱𝚞𝚔𝚒𝚝 𝚃𝚒𝚖𝚊𝚑 𝙲𝚊𝚖𝚙𝚞𝚜</h3>
                 </div>
 
 
                 <div className =  "banana_background">
+                    {/* <img src="/images/Atempo.jpg" alt="Girl in a jacket" width="500" height="600"/> */}
                     <div className = "container">
                             {this.state.canteenDisplay.map((element) => 
                                 {
-                                    if (element.campus === "Kent Ridge") 
+                                    if (element.campus === "Bukit Timah") 
                                     return (
     
                                 <div>
-                                    <img src={element.img_link} alt={element.name} width="273" height="216"/>
+                                    <img src={element.img_link} alt={element.name} width="400vh" height="300vh"/>
                                     <Link onClick = {scrollToTop} style = {linkStyle} to={element.to_id} className = "_Linkbtn"> {element.name}</Link>
                                 </div>
                                 
@@ -128,6 +100,10 @@ export default class KentRidge2 extends Component {
                                 }
                             )}                                  
                     </div>
+                                
+                    {/* <ul>                       
+                        {this.state.canteenDisplay.map(element => <li>{element.name}</li>)}
+                    </ul> */}
                 </div>
             
                 <Footer/>

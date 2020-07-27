@@ -114,7 +114,7 @@ export default function Info() {
               }}
             />
           ))}
-{/*   
+  
           {selected ? (
             <InfoWindow
               position={{ lat: selected.lat, lng: selected.lng }}
@@ -122,7 +122,7 @@ export default function Info() {
                 setSelected(null);
               }}
             >
-              <div>
+              {/* <div>
                 <h2>
                   <span role="img" aria-label="bear">
                     🐻
@@ -130,9 +130,9 @@ export default function Info() {
                   Alert
                 </h2>
                 <p>Spotted {formatRelative(selected.time, new Date())}</p>
-              </div>
+              </div> */}
             </InfoWindow>
-          ) : null} */}
+          ) : null}
         </GoogleMap>
         <div> {
           posts.map ((element) => {

@@ -410,8 +410,7 @@ h3 {
 }
 
 .halfBT h3 {
-  /* color: turquoise; */
-  color: black;
+  color: turquoise;
   background: rgba(204, 150, 49, 0.486);
 }
 
@@ -422,7 +421,7 @@ h3 {
   /* justify-content: center; */
   background-size: cover;
   background-position: right;
-  width: 100%;
+  width: 80%;
   min-height: 100vh;
   background-image: url("/images/about.jpg");
   text-align: center;
