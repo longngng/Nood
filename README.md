@@ -50,7 +50,7 @@ Our target is to construct a website that provides comprehensive information abo
 
 ### Testing interview and implementaion: 
 
-- Feedback1: Ratings of the outlets should be displayed with additional graphic instead of mere numbers. Status: resolved
-- Feedback2: There is an urgent need for an additional searching tool over the Google Map widget. Status: resolved
-- Feedback3: General feedbacks on the use of colors in the website. Status: resolved
-- Feedback4: People need to reply to existing comments. Status: resolved
+- Feedback1: Ratings of the outlets should be displayed with additional graphic instead of mere numbers. Status: `resolved`
+- Feedback2: There is an urgent need for an additional searching tool over the Google Map widget. Status: `resolved`
+- Feedback3: General feedbacks on the use of colors in the website. Status: `resolved`
+- Feedback4: People need to reply to existing comments. Status: `resolved`
