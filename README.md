@@ -30,8 +30,8 @@ Our target is to construct a website that provides comprehensive information abo
 - Populate database, including opening hours, location, faculties nearby, special requirements, menu, signature dishes
 #### By 1 August (Milestone 3):
 - User login system with Google sign-in function
-- Review with likes and comments, and rating about a dining place
-- Google map widget to locate the restaurant
+- Review and rating about a dining place
+- Having a map with searching tool to locate the restaurant
 
 ### Tech stack
 - Front-end:
@@ -41,8 +41,16 @@ Our target is to construct a website that provides comprehensive information abo
 <img src = "https://hevodata.com/blog/wp-content/uploads/2017/09/mn.png" width = "900" height = "300" align-text = "center">
 
 ### How to run it locally
-1. Go to folder `./client` and run `npm install` to install dependencies, then `npm install` at the home directory as well.
-2. Run the server and the website by `npm run dev`
+1. Go to folder `./client` and run `npm install` to install dependencies, then `npm start`
+2. To run the server, at home directory, install dependencies by `npm install express cors mongoose dotenv`. Start the server by `nodemon server`.
 
+### General diagram of the website: 
 
+<img src = "https://drive.google.com/file/d/1u_vZSHO0T1R6Flmh5v9wcJHL1568XkIQ/view?usp=sharing" width = "900" height = "300">
 
+### Testing interview and implementaion: 
+
+- Feedback1: Ratings of the outlets should be displayed with additional graphic instead of mere numbers. Status: resolved
+- Feedback2: There is an urgent need for an additional searching tool over the Google Map widget. Status: resolved
+- Feedback3: General feedbacks on the use of colors in the website. Status: resolved
+- Feedback4: People need to reply to existing comments. Status: resolved
