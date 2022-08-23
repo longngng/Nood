@@ -1,3 +1,5 @@
 .vscode/
 node_modules/
 back_end/node_modules/
+
+config/default.json
